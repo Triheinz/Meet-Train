@@ -18,3 +18,121 @@ Search and collaborative Data base platform for sports entusiast in which you ca
 - Delete Sport group - As users, we want to delete some of the sports groups we've created anytime we need to.
 - Messages -  as users we want to stablish connection though a message to contact the other profiles user we like.
 - Good Buddy -  as users we want to help the platform and other users know how our encounters went though a comment review on the profile of each user.
+
+
+
+## Server Routes (back-end)
+
+| **Method** | **Route**                   | **Description**                                              | **Request - Body**                                           |
+| ---------- | --------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| `GET`      | `/`                         | Main page route. Renders home `index` view.                  |                                                              |
+| `GET`      | `/killers/alphabet/:letter` | Renders `killers` view.                                      |                                                              |
+| `GET`      | `/killers/search/:zodiac`   | Renders `killers` view.                                      |                                                              |
+| `GET`      | `/killers/:killerId`        | Renders `details` view.                                      |                                                              |
+| `POST`     | `/private/reviews/add`      | Sends comments form data to the server, updates DB and renders `details` view. | {author, comment}                                            |
+| `GET`      | `/signup`                   | Renders `auth/signup` form view.                             |                                                              |
+| `POST`     | `/signup`                   | Sends Sign Up info to the server and creates user in the DB. Renders `auth/signup` view. | {name, email, password}                                      |
+| `GET`      | `/login`                    | Renders `auth/login` form view.                              |                                                              |
+| `POST`     | `/login`                    | Sends Log In form data to the server and redirects to homepage. | {email, password}                                            |
+| `GET`      | `/logout`                   | Logges user out and redirects to `index` view.               |                                                              |
+| `GET`      | `/private/profile/:userId`  | Private route. Renders `private/profile` view.               |                                                              |
+| `GET`      | `/private/edit-user`        | Private route. Renders `private/edit-user` form view.        |                                                              |
+| `POST`     | `/private/edit-user`        | Private route. Sends edit-profile info to server and updates user in DB and in `profile` view. | {[imageUrl], name, email, password}                          |
+| `GET`      | `/private/add-killer`       | Private route. Renders `private/add-killer` form view.       |                                                              |
+| `POST`     | `/private/add-killer`       | Private route. Sends add-killer info to server and creates killer in DB. | {[imageUrl], author, name, lastName, aka, gender, birthDate, zodiacSign, yearsActive, numberOfVictimsConfirmed, numberOfVictimsPossible, country, weapons, arrested, victimProfile, murderType, description, books} |
+| `GET`      | `/private/edit-killer`      | Private route. Renders `private/edit-killer` form view.      |                                                              |
+| `POST`     | `/private/edit-killer`      | Private route. Sends edit-killer info to server and updates killer in DB and in killers view. | {[imageUrl], author, name, lastName, aka, gender, birthDate, zodiacSign, yearsActive, numberOfVictimsConfirmed, numberOfVictimsPossible, country, weapons, arrested, victimProfile, murderType, description, books} |
+| `POST`     | `/private/delete-killer`    | Executes delete button function and updated DB. Redirects to `/private/profile/${userId}` view. |                                                              |
+| `POST`     | `/private/fave-killer`      | Private route. Redirects to `/private/profile/${userId}` view. |                                                              |
+
+
+
+## Models
+
+Serial Killer model
+
+```javascript
+{
+  "image": String,
+  "author": { type: Schema.Types.ObjectId, ref: 'User' },
+  "name": String,
+  "lastName": String,
+  "aka": String,
+  "gender": String,
+  "birthDate": String,
+  "zodiacSign": String,
+  "yearsActive": [Number],
+  "numberOfVictimsConfirmed": Number,
+  "numberOfVictimsPossible": Number,
+  "country": String,
+  "weapons": [String],
+  "arrested": Number,
+  "victimProfile": String,
+  "murderType": [String],
+  "description": String,
+  "books": [String],
+  "review": [{
+            user: String,
+            comments: String
+        		}]
+  }
+```
+
+
+
+User model
+
+```javascript
+{
+  "image": { type: String, default: '../images/avatar.png' },
+  "name": String,
+  "email": String,
+  "password": String,
+  "isAuthor": { type: Boolean, default: false },
+  "killersCreate": [{ type: Schema.Types.ObjectId, ref: 'Killer' }],
+  "faveKillers": [{ type: Schema.Types.ObjectId, ref: 'Killer' }]
+}
+```
+
+
+
+Comment model
+
+```javascript
+{
+  "author": { type: Schema.Types.ObjectId, ref: 'User' },
+  "comment": String,
+  "killerReviewed": { type: Schema.Types.ObjectId, ref: 'Killer' }
+}
+```
+
+
+
+## Backlog
+
+- Insert a Cluedo game so the user can solve crime related riddles and catch the killer.
+- Allow password edit only with email validation.
+- Allow users to interact with each other and see others' profiles.
+- Create a public API with the db we made.
+
+
+
+## Links
+
+#### Git
+
+[Repository Link](https://github.com/MartaJank/why-so-serial-m2-project)
+
+[Deploy Link](https://why-so-serial.herokuapp.com/)
+
+
+
+#### Trello
+
+[Our Trello board](https://trello.com/b/TlfJc7Ud/why-so-serial)
+
+
+
+#### Slides
+
+[Our amazing presentation!](https://docs.google.com/presentation/d/1ttOryOclzhJ0yiJgGZhi4_01DrFzLpvSLqSiYrLTAB0/edit?usp=sharing) 

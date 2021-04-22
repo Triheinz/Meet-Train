@@ -1,6 +1,3 @@
-//Array de escaladores
-// El modelo tiene nombre, descripcion, edad y ciudad.
-
 const Users = [
   {
     image: " ",

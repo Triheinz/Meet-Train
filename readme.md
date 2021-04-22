@@ -49,60 +49,43 @@ Search and collaborative Data base platform for sports entusiast in which you ca
 
 ## Models
 
-Serial Killer model
+User model
+Groups model
 
 ```javascript
 {
-  "image": String,
-  "author": { type: Schema.Types.ObjectId, ref: 'User' },
-  "name": String,
-  "lastName": String,
-  "aka": String,
-  "gender": String,
-  "birthDate": String,
-  "zodiacSign": String,
-  "yearsActive": [Number],
-  "numberOfVictimsConfirmed": Number,
-  "numberOfVictimsPossible": Number,
-  "country": String,
-  "weapons": [String],
-  "arrested": Number,
-  "victimProfile": String,
-  "murderType": [String],
-  "description": String,
-  "books": [String],
-  "review": [{
-            user: String,
-            comments: String
-        		}]
+
+    "image": { type: String, default: '../images/avatar.png' },
+    "name": String,
+    "email": String,
+    "password": String,
+    "description":String,
+    "age": Number,
+    "city": String,
+    "sport": [String],
+    "level": String,
+    "GroupsCreate": [{ type: Schema.Types.ObjectId, ref: 'Group' }],
+    "mensaje": [{ type: Schema.Types.ObjectId, ref: 'User' }]
+
+
   }
 ```
 
 
 
-User model
+Group model
 
 ```javascript
 {
-  "image": { type: String, default: '../images/avatar.png' },
-  "name": String,
-  "email": String,
-  "password": String,
-  "isAuthor": { type: Boolean, default: false },
-  "killersCreate": [{ type: Schema.Types.ObjectId, ref: 'Killer' }],
-  "faveKillers": [{ type: Schema.Types.ObjectId, ref: 'Killer' }]
-}
-```
-
-
-
-Comment model
-
-```javascript
-{
-  "author": { type: Schema.Types.ObjectId, ref: 'User' },
-  "comment": String,
-  "killerReviewed": { type: Schema.Types.ObjectId, ref: 'Killer' }
+   "image": { type: String, default: '../images/avatar.png' },
+    "name": String,
+    "participants": [{ type: Schema.Types.ObjectId, ref: 'User' }]
+    "password": String,
+    "description":String,
+    "city": String,
+    "level": String,
+    "GroupsCreate": [{ type: Schema.Types.ObjectId, ref: 'Group' }],
+    "mensaje": [{ type: Schema.Types.ObjectId, ref: 'User' }]
 }
 ```
 
@@ -110,9 +93,10 @@ Comment model
 
 ## Backlog
 
-- Insert a Cluedo game so the user can solve crime related riddles and catch the killer.
-- Allow password edit only with email validation.
-- Allow users to interact with each other and see others' profiles.
+- Responsive
+- Mapbox to display routes done by users
+- Implement live chat feature
+- Nodemailer to welcome user to the website and when joining sport group
 - Create a public API with the db we made.
 
 
@@ -121,18 +105,18 @@ Comment model
 
 #### Git
 
-[Repository Link](https://github.com/MartaJank/why-so-serial-m2-project)
+[Repository Link](https://github.com/Triheinz/Meet-Train.git)
 
-[Deploy Link](https://why-so-serial.herokuapp.com/)
+[Deploy Link]()
 
 
 
 #### Trello
 
-[Our Trello board](https://trello.com/b/TlfJc7Ud/why-so-serial)
+[Our Trello board](https://trello.com/b/m1G46xak/meettrain)
 
 
 
 #### Slides
 
-[Our amazing presentation!](https://docs.google.com/presentation/d/1ttOryOclzhJ0yiJgGZhi4_01DrFzLpvSLqSiYrLTAB0/edit?usp=sharing) 
+[Our amazing presentation!](https://www.figma.com/file/5UEUHe5E2Z2J8768LjAlRJ/Meet-and-Train?node-id=2%3A5)

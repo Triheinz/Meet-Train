@@ -23,25 +23,18 @@ Search and collaborative Data base platform for sports entusiast in which you ca
 
 ## Server Routes (back-end)
 
-| **Method** | **Route**                   | **Description**                                              | **Request - Body**                                           |
-| ---------- | --------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| `GET`      | `/`                         | Main page route. Renders home `index` view.|                  
-   
-
-| `GET`      | `/signup`                   | Renders `auth/signup` form view.|                                                                                       |
-| `POST`     | `/signup`                   | Sends Sign Up info to the server and creates user in the DB. Renders `auth/signup` view. | {name, email, password}                                      |
-| `GET`      | `/login`                    | Renders `auth/login` form view.                              |                                                              |
-| `POST`     | `/login`                    | Sends Log In form data to the server and redirects to homepage. | {email, password}                                            |
-| `GET`      | `/logout`                   | Logges user out and redirects to `index` view.               |                                                              |
-| `GET`      | `/private/profile/:userId`  | Private route. Renders `private/profile` view.               |                                                                                                   |
-| `POST`     | `/private/edit-user`        | Private route. Sends edit-profile info to server and updates user in DB and in `profile` view. | {[imageUrl], name, email, password}        
-| 
-
-| `POST`     | `/private/delete-user`    | Executes delete button function and updated DB. Redirects to `/private/profile/${userId}` view. 
-| 
-
-| `POST`     | `/private/delete-groups`    | Executes delete button function and updated DB. Redirects to `/private/profile/${userId}` view. |                                                              |
- |                                                              |
+| ***\*****Method*****\*** | ***\*****Route*****\***  | ***\*****Description*****\***                                |
+| ------------------------ | ------------------------ | ------------------------------------------------------------ |
+| GET                      | /                        | Main page route. Renders home `index` view.                  |
+| GET                      | /signup                  | Renders `auth/signup` form view.                             |
+| POST                     | /signup                  | Sends Sign Up info to the server and creates user in the DB. Renders `auth/signup` view. \| {name, email, password} |
+| GET                      | /login                   | Renders `auth/login` form view.                              |
+| POST                     | /login                   | Sends Log In form data to the server and redirects to homepage. \| {email, password} |
+| GET                      | /logout                  | Logges user out and redirects to `index` view.               |
+| GET                      | /private/profile/:userId | Private route. Renders `private/profile` view.               |
+| POST                     | /private/edit-user       | Private route. Sends edit-profile info to server and updates user in DB and in `profile` view. \| {[imageUrl], name, email, password} |
+| POST                     | /private/delete-user     | Executes delete button function and updated DB. Redirects to `/private/profile/${userId}` view. |
+| POST                     | /private/delete-groups   | Executes delete button function and updated DB. Redirects to `/private/profile/${userId}` view.`` |
 
 
 

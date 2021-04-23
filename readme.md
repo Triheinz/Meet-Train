@@ -23,27 +23,18 @@ Search and collaborative Data base platform for sports entusiast in which you ca
 
 ## Server Routes (back-end)
 
-| **Method** | **Route**                   | **Description**                                              | **Request - Body**                                           |
-| ---------- | --------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| `GET`      | `/`                         | Main page route. Renders home `index` view.                  |                                                              |
-| `GET`      | `/killers/alphabet/:letter` | Renders `killers` view.                                      |                                                              |
-| `GET`      | `/killers/search/:zodiac`   | Renders `killers` view.                                      |                                                              |
-| `GET`      | `/killers/:killerId`        | Renders `details` view.                                      |                                                              |
-| `POST`     | `/private/reviews/add`      | Sends comments form data to the server, updates DB and renders `details` view. | {author, comment}                                            |
-| `GET`      | `/signup`                   | Renders `auth/signup` form view.                             |                                                              |
-| `POST`     | `/signup`                   | Sends Sign Up info to the server and creates user in the DB. Renders `auth/signup` view. | {name, email, password}                                      |
-| `GET`      | `/login`                    | Renders `auth/login` form view.                              |                                                              |
-| `POST`     | `/login`                    | Sends Log In form data to the server and redirects to homepage. | {email, password}                                            |
-| `GET`      | `/logout`                   | Logges user out and redirects to `index` view.               |                                                              |
-| `GET`      | `/private/profile/:userId`  | Private route. Renders `private/profile` view.               |                                                              |
-| `GET`      | `/private/edit-user`        | Private route. Renders `private/edit-user` form view.        |                                                              |
-| `POST`     | `/private/edit-user`        | Private route. Sends edit-profile info to server and updates user in DB and in `profile` view. | {[imageUrl], name, email, password}                          |
-| `GET`      | `/private/add-killer`       | Private route. Renders `private/add-killer` form view.       |                                                              |
-| `POST`     | `/private/add-killer`       | Private route. Sends add-killer info to server and creates killer in DB. | {[imageUrl], author, name, lastName, aka, gender, birthDate, zodiacSign, yearsActive, numberOfVictimsConfirmed, numberOfVictimsPossible, country, weapons, arrested, victimProfile, murderType, description, books} |
-| `GET`      | `/private/edit-killer`      | Private route. Renders `private/edit-killer` form view.      |                                                              |
-| `POST`     | `/private/edit-killer`      | Private route. Sends edit-killer info to server and updates killer in DB and in killers view. | {[imageUrl], author, name, lastName, aka, gender, birthDate, zodiacSign, yearsActive, numberOfVictimsConfirmed, numberOfVictimsPossible, country, weapons, arrested, victimProfile, murderType, description, books} |
-| `POST`     | `/private/delete-killer`    | Executes delete button function and updated DB. Redirects to `/private/profile/${userId}` view. |                                                              |
-| `POST`     | `/private/fave-killer`      | Private route. Redirects to `/private/profile/${userId}` view. |                                                              |
+| ***\*****Method*****\*** | ***\*****Route*****\***  | ***\*****Description*****\***                                |
+| ------------------------ | ------------------------ | ------------------------------------------------------------ |
+| GET                      | /                        | Main page route. Renders home `index` view.                  |
+| GET                      | /signup                  | Renders `auth/signup` form view.                             |
+| POST                     | /signup                  | Sends Sign Up info to the server and creates user in the DB. Renders `auth/signup` view. \| {name, email, password} |
+| GET                      | /login                   | Renders `auth/login` form view.                              |
+| POST                     | /login                   | Sends Log In form data to the server and redirects to homepage. \| {email, password} |
+| GET                      | /logout                  | Logges user out and redirects to `index` view.               |
+| GET                      | /private/profile/:userId | Private route. Renders `private/profile` view.               |
+| POST                     | /private/edit-user       | Private route. Sends edit-profile info to server and updates user in DB and in `profile` view. \| {[imageUrl], name, email, password} |
+| POST                     | /private/delete-user     | Executes delete button function and updated DB. Redirects to `/private/profile/${userId}` view. |
+| POST                     | /private/delete-groups   | Executes delete button function and updated DB. Redirects to `/private/profile/${userId}` view.`` |
 
 
 

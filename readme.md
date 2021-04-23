@@ -48,10 +48,7 @@ Search and collaborative Data base platform for sports entusiast in which you ca
 
 
 ## Models
-
 User model
-Groups model
-
 ```javascript
 {
 
@@ -70,11 +67,7 @@ Groups model
 
   }
 ```
-
-
-
 Group model
-
 ```javascript
 {
    "image": { type: String, default: '../images/avatar.png' },
@@ -89,8 +82,6 @@ Group model
 }
 ```
 
-
-
 ## Backlog
 
 - Responsive
@@ -98,7 +89,6 @@ Group model
 - Implement live chat feature
 - Nodemailer to welcome user to the website and when joining sport group
 - Create a public API with the db we made.
-
 
 
 ## Links

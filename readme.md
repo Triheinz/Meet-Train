@@ -25,10 +25,10 @@ Search and collaborative Data base platform for sports entusiast in which you ca
 
 | **Method** | **Route**                   | **Description**                                              | **Request - Body**                                           |
 | ---------- | --------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| `GET`      | `/`                         | Main page route. Renders home `index` view.                  
+| `GET`      | `/`                         | Main page route. Renders home `index` view.|                  
    
 
-| `GET`      | `/signup`                   | Renders `auth/signup` form view.                                                                                       |
+| `GET`      | `/signup`                   | Renders `auth/signup` form view.|                                                                                       |
 | `POST`     | `/signup`                   | Sends Sign Up info to the server and creates user in the DB. Renders `auth/signup` view. | {name, email, password}                                      |
 | `GET`      | `/login`                    | Renders `auth/login` form view.                              |                                                              |
 | `POST`     | `/login`                    | Sends Log In form data to the server and redirects to homepage. | {email, password}                                            |

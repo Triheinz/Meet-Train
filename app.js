@@ -4,7 +4,7 @@ const express = require('express');
 const hbs = require('hbs');
 const mongoose = require('mongoose') //Paquete para conectarme a la base de datos
 const app = express() // Creamos la instancia de express
-const DB_NAME = 'climbers-app' // Nombre de la base de datos
+const DB_NAME = 'meet-train-app' // Nombre de la base de datos
 const bodyParser = require('body-parser'); //Constante del paquete de body-parser
 
 mongoose.connect(`mongodb://localhost/${DB_NAME}`) //Nos conectamos a la base de datos y nos devuelve una promesa.
@@ -23,18 +23,9 @@ app.use(bodyParser.urlencoded({ //Traduce la informacion y Nos permite utilizar 
 
 //Importar el router.
 const index = require('./routes/index'); //importamos el router.
-const userRoutes = require('./routes/user-routes');
+const users = require('./routes/index');
 app.use('/', index); //Usa este router, si las url empiezan por /, entra en index.js y a ver si encuentras alguna ruta que coincida, entonces si la encuentra la renderiza, renderiza el index hbs, pero esta ruta se enceuntra en index.js (no liarse con esto).
-app.use('/user-routes', user-routes);
-
-
-
-
-
-//Rutas:
-// app.get("/", (req, res) => {
-//     res.render('index'); //Renderizara la ruta index, si escribes / puedes poner cualquier nombre, pero sera tu pagina principal.
-// })
+app.use('/users', users);
 
 //Ponemos a la aplicación a escuchar en el puerto 3000
 app.listen(3000, () => console.log(`Listening on port 3000. http://localhost:3000`))

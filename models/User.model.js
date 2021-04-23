@@ -19,6 +19,6 @@ const userSchema = new Schema({
   groups: [{ type: Schema.Types.ObjectId, ref: 'Group' }],
 });
 
-const User = mongoose.model('User',userSchema);
+const User = mongoose.model('User', userSchema);
 
 module.exports = User;

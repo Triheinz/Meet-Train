@@ -7,7 +7,8 @@ const router = express.Router();
 router.get("/", (req, res) => {
     User.find({})
         .then((users) => {
-            res.render("/index", { users }); //Renderizado de esa lista de escaladores, primer parametro es la lista  y el segundo la informacion que le queramos pasar
+            console.log(users)
+            res.render("index", { users }); //Renderizado de esa lista de escaladores, primer parametro es la lista  y el segundo la informacion que le queramos pasar
         })
         .catch((error) => console.error(error));
 });

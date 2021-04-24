@@ -29,13 +29,6 @@ a {
 }
 
 
-/* color link izquierdo navegador */
-
-.navbar-brand {
-    color: rgb(195, 0, 255);
-}
-
-
 /* Flecha del menu, para que no se vea. */
 
 ::after {
@@ -84,18 +77,21 @@ a {
     width: 200px;
     height: 200px;
     margin-top: 25px;
+    opacity: 33%;
 }
 
 .imagen-compañeros {
     width: 200px;
     height: 160px;
     margin-top: 50px;
+    opacity: 33%;
 }
 
 .imagen-review {
     width: 200px;
     height: 160px;
     margin-top: 50px;
+    opacity: 33%;
 }
 
 .parrafos-index {
@@ -107,8 +103,12 @@ a {
 
 .p-index {
     position: absolute;
-    top: 91%;
-    left: 13%;
+    top: 75%;
+    left: 12.2%;
+    color: rgb(53, 53, 53);
+    font-size: 20px;
+    font-weight: 500;
+    -webkit-text-stroke: 0.5px rgb(195, 0, 255);
 }
 
 .p-index2 {

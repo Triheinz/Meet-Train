@@ -1,5 +1,5 @@
 const users = [{
-        image: "/public/images/man.png",
+        image: "https://i.chzbgr.com/full/9151546112/hD5CC5989/el-fisiculturista-germanlifter-se-crea-un-perfil-falso-en-tinder",
         name: 'Sam',
         email: 'sam@hotmail.com',
         password: '12345',

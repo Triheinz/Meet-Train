@@ -6,8 +6,16 @@ const router = express.Router(); //Lo importamos de express, vamos a crear una i
 //     res.render('index'); //Renderizara la ruta index, si escribes / puedes poner cualquier nombre, pero sera tu pagina principal.
 // })
 
-router.get("/search", (req, res) => {
-    res.render('search'); //Renderizara la ruta index, si escribes / puedes poner cualquier nombre, pero sera tu pagina principal.
+router.get("/signup", (req, res) => {
+    res.render('signup'); //Renderizara la ruta index, si escribes / puedes poner cualquier nombre, pero sera tu pagina principal.
+})
+
+router.get("/login", (req, res) => {
+    res.render('login'); //Renderizara la ruta index, si escribes / puedes poner cualquier nombre, pero sera tu pagina principal.
+})
+
+router.get("/whoRwe", (req, res) => {
+    res.render('whoRwe'); //Renderizara la ruta index, si escribes / puedes poner cualquier nombre, pero sera tu pagina principal.
 })
 
 module.exports = router; //exportar el router, lo debemos importar a app.js

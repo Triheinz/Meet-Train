@@ -8,7 +8,7 @@ const userSchema = new Schema(
       default:
         'https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png',
     },
-    name: { type: String, required: true },
+    username: { type: String, required: true },
     email: { type: String, required: true, unique: true },
     password: { type: String },
     description: { type: String, minlength: 100, maxlength: 1000 },

@@ -83,7 +83,7 @@ router.post(
   '/login',
   passport.authenticate('local', {
     successRedirect: '/private/profile',
-    failureRedirect: '/auth/login',
+    failureRedirect: '/login',
     passReqToCallback: true,
   })
 );

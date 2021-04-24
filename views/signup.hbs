@@ -1,7 +1,10 @@
-  <h1>Meet & Train</h1>
+
+  <div class ="signupAll">
+  <h1 class="signup">Meet & Train</h1>
   <p>Rellena el formulario con tus datos</p>
 
-  <form method = "POST" action="../routes/user-routes" enctype="multipart/form-data">
+
+  <form method = "POST" action="../routes/index" enctype="multipart/form-data">
 
   <div class="row g-3 align-items-center">
   <div class="col-auto">
@@ -18,21 +21,15 @@
     <label for="city" class="col-form-label">Ciudad</label>
     <input type="city" id="city" class="form-control" aria-describedby="city">
   </div>
-</div>
+
 <br>
   <div class="col-auto">
     <label for="age" class="col-form-label">Age</label>
     <input type="age" id="age" class="form-control" aria-describedby="age">
   </div>
-</div>
-<br>
-  <div class="col-auto">
-    <label for="sport" class="col-form-label">Deporte</label>
-    <input type="sport" id="sport" class="form-control" aria-describedby="sport">
-  </div>
-</div>
 
-  <div class="mb-3">
+<br>
+  <div class="mb-4">
     <label for="exampleInputEmail1" class="form-label">Email address</label>
     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
 
@@ -42,8 +39,10 @@
     <label for="profile-pic" class="form-label">Foto de perfil</label>
     <input type="file" class="form-control" id="profile-pic" aria-describedby="profile-pic" name="image" required>
     <div id="profile-pic" class="form-text">Agrega una foto de perfil.</div>
-  </div>
 
-  <atype="submit" class="btn btn-primary">Registrarme</button>
+  </div>
+  <br>
+  <button type="submit" id="botton-signup" class="btn btn-primary">Registrarte</button>
 
 </form>
+</div>

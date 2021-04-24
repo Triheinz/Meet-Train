@@ -1,7 +1,29 @@
-<h1>TEST</h1>
+<main>
+<div class="container-menu-principal">
+<h1 class="h1">Meet & Train</h1>
+<p class="parrafo-principal">La página para encontrar compañeros de deporte en España</p>
+<button id="botton-encuentra-tu-coincidencia">Encuentra tu coincidencia</button>
+</div>
+<div class="div-imagenes">
+    <div>
+    <img class="imagen-perfil"src="images/perfil.png" alt="foto1">
+    <p class="p-index">Crea tu perfil</p>
+    </div>
+    <div>
+    <img class="imagen-compañeros" src="images/personajes.png" alt="foto2">
+    <p class="p-index2">Selecciona compañeros</p>
+    </div>
+    <div>
+    <img class="imagen-review" src="images/comunidad.png" alt="foto3">
+    <p class="p-index3">Dejale un comentario</p>
+    </div>
+</div>
+
+
 {{#each users}} {{!--Recorremos el array de climbers e imprimimos el nombre. --}}
 
 <h3>{{name}}</h3>
 <hr>
 {{/each}}
+</main>
 

@@ -1,0 +1,120 @@
+* {
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/* NAVEGADOR */
+
+.logo-menu {
+    width: 50px;
+    height: 50px;
+    padding-bottom: 5px;
+}
+
+
+/* color fondo navegador */
+
+.color-nav {
+    background-color: rgb(185, 185, 185);
+}
+
+
+/* Color links derechos navegador */
+
+a {
+    color: rgb(195, 0, 255);
+    margin-left: 40px;
+}
+
+
+/* color link izquierdo navegador */
+
+.navbar-brand {
+    color: rgb(195, 0, 255);
+}
+
+
+/* Flecha del menu, para que no se vea. */
+
+::after {
+    visibility: hidden;
+}
+
+
+/* Body pagina principal (index) */
+
+.container-menu-principal {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.h1 {
+    text-align: center;
+    color: rgb(195, 0, 255);
+    font-size: 75px;
+    margin-top: 50px;
+}
+
+.parrafo-principal {
+    text-align: center;
+    font-size: 20px;
+}
+
+#botton-encuentra-tu-coincidencia {
+    border-radius: 50px;
+    width: 250px;
+    height: 60px;
+    color: white;
+    font-size: 18px;
+    background-color: seagreen;
+}
+
+.div-imagenes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+.imagen-perfil {
+    width: 200px;
+    height: 200px;
+    margin-top: 25px;
+}
+
+.imagen-compañeros {
+    width: 200px;
+    height: 160px;
+    margin-top: 50px;
+}
+
+.imagen-review {
+    width: 200px;
+    height: 160px;
+    margin-top: 50px;
+}
+
+.parrafos-index {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    justify-content: space-evenly;
+}
+
+.p-index {
+    position: absolute;
+    top: 91%;
+    left: 13%;
+}
+
+.p-index2 {
+    margin-left: 20px;
+}
+
+.p-index3 {
+    margin-left: 20px;
+}

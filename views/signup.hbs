@@ -1,12 +1,49 @@
-<form>
+  <h1>Meet & Train</h1>
+  <p>Rellena el formulario con tus datos</p>
+
+  <form method = "POST" action="../routes/user-routes" enctype="multipart/form-data">
+
+  <div class="row g-3 align-items-center">
+  <div class="col-auto">
+    <label for="username" class="col-form-label">Name</label>
+    <input type="text" id="username" class="form-control" aria-describedby="username" name="username" required>
+  </div>
+  <br>
+    <div class="col-auto">
+    <label for="password" class="col-form-label">Password</label>
+    <input type="password" id="password" class="form-control" aria-describedby="password">
+  </div>
+<br>
+  <div class="col-auto">
+    <label for="city" class="col-form-label">Ciudad</label>
+    <input type="city" id="city" class="form-control" aria-describedby="city">
+  </div>
+</div>
+<br>
+  <div class="col-auto">
+    <label for="age" class="col-form-label">Age</label>
+    <input type="age" id="age" class="form-control" aria-describedby="age">
+  </div>
+</div>
+<br>
+  <div class="col-auto">
+    <label for="sport" class="col-form-label">Deporte</label>
+    <input type="sport" id="sport" class="form-control" aria-describedby="sport">
+  </div>
+</div>
+
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Email address</label>
     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+
   </div>
-  <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1">
+  <br>
+  <div class="mb-3 needs-validation">
+    <label for="profile-pic" class="form-label">Foto de perfil</label>
+    <input type="file" class="form-control" id="profile-pic" aria-describedby="profile-pic" name="image" required>
+    <div id="profile-pic" class="form-text">Agrega una foto de perfil.</div>
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+
+  <atype="submit" class="btn btn-primary">Registrarme</button>
+
 </form>

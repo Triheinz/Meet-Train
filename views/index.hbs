@@ -8,24 +8,32 @@
     <div>
     <img class="imagen-perfil"src="images/perfil.png" alt="foto1">
     <p class="p-index">Crea tu perfil</p>
+    <p class="p-crea">Inscríbete y se parte de nuestra comunidad</p>
     </div>
     <div>
     <img class="imagen-compañeros" src="images/personajes.png" alt="foto2">
     <p class="p-index2">Selecciona compañeros</p>
+    <p class="p-selec">Busca compañeros para realizar tu deporte favorito y deja tu review después de cada encuentro.</p>
     </div>
     <div>
     <img class="imagen-review" src="images/comunidad.png" alt="foto3">
-    <p class="p-index3">Dejale un comentario</p>
+    <p class="p-index3">Únete a grupos</p>
+    <p class="p-find">Encuentra grupos de distintos deportes para quedar y realizar actividades deportivas</p>
     </div>
 </div>
 
-
-{{#each users}} {{!--Recorremos el array de usuarios e imprimimos el nombre. --}}
-
+<div class = 'usuarios-home'>
+  {{#each users}} {{!--Recorremos el array de usuarios e imprimimos el nombre. --}}
 <h3>{{name}}</h3>
 {{age}}
-{{image}}
-<hr>
+
 {{/each}}
+</div>
+<div class = 'grupos-home'>
+  {{#each groups}} {{!--Recorremos el array de usuarios e imprimimos el nombre. --}}
+<h3>{{name}}</h3>
+
+{{/each}}
+</div>
 </main>
 

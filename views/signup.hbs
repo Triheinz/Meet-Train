@@ -1,40 +1,46 @@
 
   <div class ="signupAll">
   <h1 class="signup">Meet & Train</h1>
-  <p>Rellena el formulario con tus datos</p>
+  <p class="parrafo-signup-texto-titulo">Rellena el formulario con tus datos</p>
 
 
   <form method = "POST" action="../routes/index" enctype="multipart/form-data">
   <div class="contenedor-formulario">
-  <div class="row g-3">
-  <div class="col-auto">
-    <label for="username" class="col-form-label">Nombre:</label>
-    <input type="text" id="username" class="form-control" aria-describedby="username" name="username" required>
+  <p class="parrafo-signup">Nombre:</p>
+  <input class="input-text "type="text" placeholder="Escribe tu nombre">
+  <p class="parrafo-signup">Contraseña:</p>
+  <input class="input-text" type="password" placeholder="Elije tu contraseña">
+  <p class="parrafo-signup">Correo Electronico:</p>
+  <input class="input-text" type="email" placeholder="¿Cual es tu Email?">
+  <p class="parrafo-signup">Edad:</p>
+  <input class="input-text" type="text" placeholder="¿Que edad tienes?">
+  <p class="parrafo-signup">Ciudad:</p>
+  <input class="input-text" type="text" placeholder="¿Donde vives?">
+  <p class="parrafo-signup">Sexo:</p>
+  <div class="contenedor-sexo">
+  <input type="radio" name="genero" value="hombre">
+  <label for="male">Hombre</label><br>
+  <input type="radio" name="genero" value="mujer">
+  <label for="female">Mujer</label><br>
+  <input type="radio" name="genero" value="otro">
+  <label for="otro">Otro</label><br>
   </div>
-  <br>
-    <div class="col-auto">
-    <label for="password" class="col-form-label">Contraseña:</label>
-    <input type="password" id="password" class="form-control" aria-describedby="password">
+  <p class="parrafo-signup">¿Que deportes te gusta practicar?</p>
+  <div>
+  <input type="checkbox" name="surf" value="surf">
+  <label for="surf">Surf</label><br>
+  <input type="checkbox" name="escalada" value="escalada">
+  <label for="escalada">Escalada</label><br>
+  <input type="checkbox"name="correr" value="correr">
+  <label for="correr">Correr</label>
+  <input type="checkbox"name="ciclismo" value="ciclismo">
+  <label for="ciclismo">Ciclismo</label>
+  <input type="checkbox"name="paddel" value="paddel">
+  <label for="paddel">Paddel</label>
   </div>
-<br>
-  <div class="col-auto">
-    <label for="city" class="col-form-label">Ciudad:</label>
-    <input type="city" id="city" class="form-control" aria-describedby="city">
-  </div>
-
-<br>
-  <div class="col-auto">
-    <label for="age" class="col-form-label">Edad:</label>
-    <input type="age" id="age" class="form-control" aria-describedby="age">
-  </div>
-
-<br>
-  <div class="mb-4">
-    <label for="exampleInputEmail1" class="col-form-label">Email:</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-
-  </div>
-  <br>
+<label for="descripcion">¿Que te gusta hacer?</label>
+<textarea name="descripcion" rows="4" cols="50" placeholder="Añade una descripción">
+</textarea>
   <div class="mb-3 needs-validation">
     <label for="profile-pic" class="col-form-label">Foto de perfil</label>
     <input type="file" class="form-control" id="profile-pic" aria-describedby="profile-pic" name="image" required>
@@ -46,4 +52,5 @@
 </form>
 </div>
 </div>
+
 

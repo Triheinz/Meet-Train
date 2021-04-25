@@ -1,38 +1,12 @@
 /* ------SIGN UP------ */
 
-.contenedor-formulario {
-    width: 400px;
-    height: 800px;
-    border: 5px solid red;
-}
-
-
-/* divs de nombre,password,ciudad,edad. */
-
-.col-auto {
+body {
     display: flex;
-    flex-direction: row;
-    border-right: 50px;
-}
-
-.form-control {
-    width: 300px;
-    height: 40px;
-    margin-left: 70px;
+    justify-content: center;
 }
 
 
-/* DIV EMAIL */
-
-.mb-4 {
-    display: flex;
-    flex-direction: row;
-}
-
-.row.g-3.align-items-center {
-    display: flex;
-    flex-direction: column;
-}
+/* TITULO */
 
 .signup {
     text-align: center;
@@ -43,10 +17,45 @@
     margin-top: 100px;
 }
 
-.signupAll p {
-    text-align: center;
+
+/* Contenedor principal */
+
+.contenedor-formulario {
+    width: 400px;
+    height: 800px;
+    border: 5px solid red;
+    position: absolute;
+    top: 45%
+}
+
+.parrafo-signup-texto-titulo {
+    font-family: 'Acme';
     font-size: 20px;
-    color: rgb(71, 71, 71);
+    position: absolute;
+    top: 32%;
+    left: 39.5%;
+}
+
+.parrafo-signup {
+    margin: 0%;
+    padding-left: 10px;
+}
+
+.input-text {
+    width: 100%;
+    margin-bottom: 4%;
+    outline: none;
+    border: 1px solid rgb(173, 173, 173);
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+.contenedor-sexo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 4%;
 }
 
 #botton-signup {

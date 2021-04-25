@@ -1,0 +1,47 @@
+.usPresent h1{
+  text-align: center;
+    color: rgb(106, 54, 148);
+    font-size: 75px;
+    font-family: 'Acme';
+    margin-top: 100px;
+}
+.usPresent p{
+  margin-left: 100px;
+  margin-right: 100px;
+  text-align: center;
+    font-size: 20px;
+    color: rgb(71, 71, 71);
+}
+.founders{
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin: 50px;
+  margin-right: 150px;
+  margin-left: 150px;
+
+}
+.founder1{
+  width: 90%;
+  margin-right: 80px;
+}
+.founder2{
+  width: 90%;
+  margin-left: 80px;
+}
+.founders h2{
+  margin-top: 15px;
+  color:rgb(23, 123, 117);
+}
+.founders p{
+  color: rgb(71, 71, 71);
+  margin-right: 80px;
+  margin-left: 80px;
+}
+
+.founderimg {
+  width: 305px;
+  height: 285px;
+  border-radius: 15px;
+
+}

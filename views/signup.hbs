@@ -5,44 +5,45 @@
 
 
   <form method = "POST" action="../routes/index" enctype="multipart/form-data">
-
-  <div class="row g-3 align-items-center">
+  <div class="contenedor-formulario">
+  <div class="row g-3">
   <div class="col-auto">
-    <label for="username" class="col-form-label">Name</label>
+    <label for="username" class="col-form-label">Nombre:</label>
     <input type="text" id="username" class="form-control" aria-describedby="username" name="username" required>
   </div>
   <br>
     <div class="col-auto">
-    <label for="password" class="col-form-label">Password</label>
+    <label for="password" class="col-form-label">Contraseña:</label>
     <input type="password" id="password" class="form-control" aria-describedby="password">
   </div>
 <br>
   <div class="col-auto">
-    <label for="city" class="col-form-label">Ciudad</label>
+    <label for="city" class="col-form-label">Ciudad:</label>
     <input type="city" id="city" class="form-control" aria-describedby="city">
   </div>
 
 <br>
   <div class="col-auto">
-    <label for="age" class="col-form-label">Age</label>
+    <label for="age" class="col-form-label">Edad:</label>
     <input type="age" id="age" class="form-control" aria-describedby="age">
   </div>
 
 <br>
   <div class="mb-4">
-    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <label for="exampleInputEmail1" class="col-form-label">Email:</label>
     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
 
   </div>
   <br>
   <div class="mb-3 needs-validation">
-    <label for="profile-pic" class="form-label">Foto de perfil</label>
+    <label for="profile-pic" class="col-form-label">Foto de perfil</label>
     <input type="file" class="form-control" id="profile-pic" aria-describedby="profile-pic" name="image" required>
     <div id="profile-pic" class="form-text">Agrega una foto de perfil.</div>
 
   </div>
   <br>
   <button type="submit" id="botton-signup" class="btn btn-primary">Registrarte</button>
-
 </form>
 </div>
+</div>
+

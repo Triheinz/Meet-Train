@@ -8,7 +8,7 @@ module.exports = {
   },
   isLoggedOut: (req, res, next) => {
     if (req.isAuthenticated()) {
-      res.redirect('/profile');
+      res.redirect('/private/profile');
     } else {
       next();
     }

@@ -14,10 +14,12 @@ require('./config/db.config');
 require('./config/middleware.config')(app);
 
 //ExpressView
+require('./config/cloudinary.config');
 require('./config/views.config')(app);
 require('./config/session.config')(app);
 require('./config/locals.config')(app);
 require('./config/passport.config')(app);
+
 
 
 //Importar el router.

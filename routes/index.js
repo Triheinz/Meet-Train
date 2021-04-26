@@ -41,9 +41,10 @@ router.post('/signup', fileUploader.single('image'), (req, res) => {
             errorMessage: 'Password should have at least 3 characters',
         });
     }
-
+      console.log('dataBase.findOne');
     User.findOne({ username })
         .then((user) => {
+          console.log('insideFinOne');
             if (user) {
                 return res.render('signup', { errorMessage: 'User already exists.' });
             }
@@ -64,7 +65,7 @@ router.post('/signup', fileUploader.single('image'), (req, res) => {
                     picture,
                 })
                 .then((newUser) => {
-                    // return res.redirect('/');
+                    console.log('user created');
                     req.login(newUser, (error) => {
                         if (error) {
                             next(error);

@@ -7,11 +7,11 @@
   <form method = "POST" action="../routes/index" enctype="multipart/form-data">
   <div class="contenedor-formulario">
   <p class="parrafo-signup">Nombre:</p>
-  <input class="input-text "type="text" placeholder="Escribe tu nombre">
+  <input class="input-text" name="username" type="text" placeholder="Escribe tu nombre">
   <p class="parrafo-signup">Contraseña:</p>
-  <input class="input-text" type="password" placeholder="Elije tu contraseña">
+  <input class="input-text"  name="password" type="password" placeholder="Elije tu contraseña">
   <p class="parrafo-signup">Correo Electronico:</p>
-  <input class="input-text" type="email" placeholder="¿Cual es tu Email?">
+  <input class="input-text" name="email" type="email" placeholder="¿Cual es tu Email?">
   <p class="parrafo-signup">Edad:</p>
   <input class="input-text" type="text" placeholder="¿Que edad tienes?">
   <p class="parrafo-signup">Ciudad:</p>
@@ -37,6 +37,8 @@
   <label for="ciclismo">Ciclismo</label>
   <input type="checkbox"name="paddel" value="paddel">
   <label for="paddel">Paddel</label>
+  <input type="checkbox"name="futbol" value="futbol">
+  <label for="futbol">Futbol</label>
   </div>
 <label for="descripcion">¿Que te gusta hacer?</label>
 <textarea name="descripcion" rows="4" cols="50" placeholder="Añade una descripción">

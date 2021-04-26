@@ -3,6 +3,7 @@ const MongoStore = require('connect-mongo');
 const app = require('../app');
 
 module.exports = (app) => {
+    console.log(process.env.MONGODB_URL);
     app.use(
         session({
             secret: process.env.SECRET,

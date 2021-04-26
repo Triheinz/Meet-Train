@@ -20,12 +20,14 @@ require('./config/session.config')(app);
 //Importar el router.
 const index = require('./routes/index'); //importamos el router.
 const users = require('./routes/user-routes');
-const groups = require ('/routes/group-routes.js')
+const private = require('./routes/private-routes');
+// const groups = require('/routes/group-routes')
 
 
 app.use('/', index); //Usa este router, si las url empiezan por /, entra en index.js y a ver si encuentras alguna ruta que coincida, entonces si la encuentra la renderiza, renderiza el index hbs, pero esta ruta se enceuntra en index.js (no liarse con esto).
 app.use('/', users);
-app.use('/', groups);
+app.use('/', private);
+// app.use('/', groups);
 
 
 //Ponemos a la aplicación a escuchar en el puerto 3000

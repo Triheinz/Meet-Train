@@ -1,4 +1,3 @@
-
 const bcrypt = require('bcryptjs');
 const passport = require('passport');
 const User = require('../models/User.model');
@@ -15,82 +14,78 @@ const router = express.Router(); //Lo importamos de express, vamos a crear una i
 // })
 
 router.get('/signup', (req, res) => {
-  res.render('signup'); //Renderizara la ruta index, si escribes / puedes poner cualquier nombre, pero sera tu pagina principal.
+    res.render('signup'); //Renderizara la ruta index, si escribes / puedes poner cualquier nombre, pero sera tu pagina principal.
 });
 
 router.get('/login', (req, res) => {
-  res.render('login'); //Renderizara la ruta index, si escribes / puedes poner cualquier nombre, pero sera tu pagina principal.
+    res.render('login'); //Renderizara la ruta index, si escribes / puedes poner cualquier nombre, pero sera tu pagina principal.
 });
 
 router.get('/whoRwe', (req, res) => {
-  res.render('whoRwe'); //Renderizara la ruta index, si escribes / puedes poner cualquier nombre, pero sera tu pagina principal.
-});
-
-router.get('/signup', isLoggedOut, (req, res) => {
-  res.render('signup');
+    res.render('whoRwe'); //Renderizara la ruta index, si escribes / puedes poner cualquier nombre, pero sera tu pagina principal.
 });
 
 router.post('/signup', (req, res) => {
-  const { username, password } = req.body;
+    const { username, password } = req.body;
 
-  if (!username || !password) {
-    res.render('signup', {
-      errorMessage: 'Username and password are required.',
-    });
-  }
-
-  // const regularExpresion = new RegExp('');
-  // regularExpresion.test(password)
-
-  if (password.length < 3) {
-    res.render('signup', {
-      errorMessage: 'Password should have at least 3 characters',
-    });
-  }
-
-  User.findOne({ username }).then((user) => {
-    if (user) {
-      return res.render('signup', { errorMessage: 'User already exists.' });
+    if (!username || !password) {
+        res.render('signup', {
+            errorMessage: 'Username and password are required.',
+        });
     }
 
-    const salt = bcrypt.genSaltSync(saltRounds);
-    const hashPass = bcrypt.hashSync(password, salt);
+    // const regularExpresion = new RegExp('');
+    // regularExpresion.test(password)
 
-    User.create({ username, password: hashPass })
-      .then((newUser) => {
-        // return res.redirect('/');
-        req.login(newUser, (error) => {
-          if (error) {
-            next(error);
-          }
-          return res.redirect('/private/profile');
+    if (password.length < 3) {
+        res.render('signup', {
+            errorMessage: 'Password should have at least 3 characters',
         });
-      })
-      .catch((error) => {
-        console.log(error);
-        return res.render('signup', {
-          errorMessage: 'Server error. Try again.',
-        });
-      });
-  });
+    }
+
+    User.findOne({ username }).then((user) => {
+        if (user) {
+            return res.render('signup', { errorMessage: 'User already exists.' });
+        }
+
+        const salt = bcrypt.genSaltSync(saltRounds);
+        const hashPass = bcrypt.hashSync(password, salt);
+
+        User.create({ username, password: hashPass })
+            .then((newUser) => {
+                // return res.redirect('/');
+                req.login(newUser, (error) => {
+                    if (error) {
+                        next(error);
+                    }
+                    return res.redirect('/private-routes/profile');
+                });
+            })
+            .catch((error) => {
+                console.log(error);
+                return res.render('signup', {
+                    errorMessage: 'Server error. Try again.',
+                });
+            });
+    });
 });
 
 router.get('/login', isLoggedOut, (req, res) => {
-  res.render('login');
+    res.render('login');
 });
 
 router.post(
-  '/login',
-  passport.authenticate('local', {
-    successRedirect: '/private/profile',
-    failureRedirect: '/login',
-    passReqToCallback: true,
-  })
+    '/login',
+    passport.authenticate('local', {
+        successRedirect: '/private/profile',
+        failureRedirect: '/login',
+        passReqToCallback: true,
+    })
 );
 
 router.get('/logout', (req, res) => {
-  req.logout();
-  res.redirect('/');
+    req.logout();
+    res.redirect('/');
 });
 
 

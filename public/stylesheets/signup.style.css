@@ -25,7 +25,7 @@ body {
     width: 400px;
     height: 800px;
     position: absolute;
-    top: 45%
+    top: 43%
 }
 
 .parrafo-signup-texto-titulo {
@@ -43,11 +43,16 @@ body {
 
 .input-text {
     width: 100%;
+    margin-top: 0.5%;
     margin-bottom: 4%;
     outline: none;
     border: 1px solid rgb(173, 173, 173);
     border-radius: 5px;
     padding-left: 10px;
+}
+
+.input-text:focus {
+    box-shadow: 0px 0px 5px #0066ff;
 }
 
 .contenedor-sexo {
@@ -84,6 +89,10 @@ textarea {
     margin-top: 5px;
 }
 
+textarea:focus {
+    box-shadow: 0px 0px 5px #0066ff;
+}
+
 #botton-signup {
     border-radius: 50px;
     width: 200px;
@@ -95,4 +104,10 @@ textarea {
     position: absolute;
     top: 93%;
     left: 25%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+#botton-signup:hover {
+    background-color: rgb(20, 92, 87);
 }

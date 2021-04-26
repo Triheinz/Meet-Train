@@ -8,16 +8,17 @@ const app = express() // Creamos la instancia de express
 const DB_NAME = 'meet-train-app' // Nombre de la base de datos
 
 //Database
-require('./config/db.config')
+require('./config/db.config');
 
 //Middleware
 require('./config/middleware.config')(app);
 
 //ExpressView
-require('./config/views.config')(app)
+require('./config/views.config')(app);
 require('./config/session.config')(app);
-require('./configs/locals.config')(app);
-require('./configs/passport.config')(app);
+require('./config/locals.config')(app);
+require('./config/passport.config')(app);
+
 
 //Importar el router.
 const authRouter = require('./routes/index'); //importamos el router.

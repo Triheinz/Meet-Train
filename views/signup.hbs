@@ -9,13 +9,13 @@
   <p class="parrafo-signup">Nombre:</p>
   <input class="input-text" name="username" type="text" placeholder="Escribe tu nombre">
   <p class="parrafo-signup">Contraseña:</p>
-  <input class="input-text"  name="password" type="password" placeholder="Elije tu contraseña">
+  <input class="input-text" name="password" type="password" placeholder="Elije tu contraseña">
   <p class="parrafo-signup">Correo Electronico:</p>
   <input class="input-text" name="email" type="email" placeholder="¿Cual es tu Email?">
   <p class="parrafo-signup">Edad:</p>
-  <input class="input-text" type="text" placeholder="¿Que edad tienes?">
+  <input class="input-text" name="age" type="text" placeholder="¿Que edad tienes?">
   <p class="parrafo-signup">Ciudad:</p>
-  <input class="input-text" type="text" placeholder="¿Donde vives?">
+  <input class="input-text" name="city" type="text" placeholder="¿Donde vives?">
   <p class="parrafo-signup">Sexo:</p>
   <div class="contenedor-sexo">
   <input type="radio" name="genero" value="hombre">
@@ -26,22 +26,38 @@
   <label for="otro">Otro</label><br>
   </div>
   <p class="parrafo-signup">¿Que deportes te gusta practicar?</p>
-  <div>
-  <input type="checkbox" name="surf" value="surf">
+  <div class="div-deportes">
+  <div class="div-deportes-seccion1">
+  <div class="surf">
+  <input type="checkbox" name="sports" value="surf">
   <label for="surf">Surf</label><br>
-  <input type="checkbox" name="escalada" value="escalada">
+  </div>
+  <div>
+  <input type="checkbox" name="sports" value="escalada">
   <label for="escalada">Escalada</label><br>
-  <input type="checkbox"name="correr" value="correr">
+  </div>
+  <div>
+  <input type="checkbox"name="sports" value="correr">
   <label for="correr">Correr</label>
-  <input type="checkbox"name="ciclismo" value="ciclismo">
+  </div>
+  </div>
+  <div class="div-deportes-seccion2">
+  <div>
+  <input type="checkbox"name="sports" value="ciclismo">
   <label for="ciclismo">Ciclismo</label>
-  <input type="checkbox"name="paddel" value="paddel">
+  </div>
+  <div>
+  <input type="checkbox"name="sports" value="paddel">
   <label for="paddel">Paddel</label>
-  <input type="checkbox"name="futbol" value="futbol">
+  </div>
+  <div>
+  <input type="checkbox"name="sports" value="futbol">
   <label for="futbol">Futbol</label>
   </div>
+  </div>
+  </div>
 <label for="descripcion">¿Que te gusta hacer?</label>
-<textarea name="descripcion" rows="4" cols="50" placeholder="Añade una descripción">
+<textarea name="description" rows="4" cols="50" placeholder="Añade una descripción">
 </textarea>
   <div class="mb-3 needs-validation">
     <label for="profile-pic" class="col-form-label">Foto de perfil</label>

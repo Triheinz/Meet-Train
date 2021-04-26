@@ -58,6 +58,34 @@ body {
     margin-bottom: 4%;
 }
 
+.div-deportes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 390px;
+
+}
+
+.div-deportes-seccion1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 390px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+}
+
+.div-deportes-seccion2{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 390px;
+    margin-bottom: 20px;
+}
+
 #botton-signup {
     border-radius: 50px;
     width: 200px;

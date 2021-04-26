@@ -22,13 +22,13 @@ const groupSchema = new Schema({
     activitiesPics: { type: [String] },
 }, { timestamps: true });
 
-const Group = mongoose.model('Group', groupSchema);
+const Groups = mongoose.model('Groups', groupSchema);
 
-const doc = await User.create({ Group });
+//const doc = await User.create({ Groups });
 
-doc.createdAt; // 2020-07-06T20:36:59.414Z
-doc.updatedAt; // 2020-07-06T20:36:59.414Z
+//doc.createdAt; // 2020-07-06T20:36:59.414Z
+//doc.updatedAt; // 2020-07-06T20:36:59.414Z
 
-doc.createdAt instanceof Date;
+//doc.createdAt instanceof Date;
 
-module.exports = Group;
+module.exports = Groups;

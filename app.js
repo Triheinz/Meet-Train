@@ -16,6 +16,8 @@ require('./config/middleware.config')(app);
 //ExpressView
 require('./config/views.config')(app)
 require('./config/session.config')(app);
+require('./configs/locals.config')(app);
+require('./configs/passport.config')(app);
 
 //Importar el router.
 const authRouter = require('./routes/index'); //importamos el router.

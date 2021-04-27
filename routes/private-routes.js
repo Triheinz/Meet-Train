@@ -8,9 +8,9 @@ const router = express.Router();
 
 router.get('/profile', isLoggedIn, (req, res, next) => {
     res.render('profile', {
-      user: req.user,
-      isAdmin: req.user.role === 'Admin',
-      access: req.user,
+        user: req.user,
+        isAdmin: req.user.role === 'Admin',
+        access: req.user,
     });
 });
 

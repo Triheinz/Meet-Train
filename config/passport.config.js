@@ -13,7 +13,7 @@ module.exports = (app) => {
   })
     passport.use(
       new LocalStrategy(
-        { passReqToCallback: true },
+        { passReqToCallback: true, usernameField: 'email' },
         (req, username, password, next) => {
           User.findOne({ username })
             .then((user) => {

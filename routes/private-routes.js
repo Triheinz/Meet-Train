@@ -36,7 +36,12 @@ router.post('/edit-group', uploader.single('image'), (req, res, next) => {
 });
 
 router.get('/partners', isLoggedIn, (req, res, next) => {
-    res.render('partners', { user: req.user, access: req.user });
+    User.find({})
+    .then((users)=>{
+      res.render('partners', { user: req.user, access: req.user, users });
+    })
+    .catch((err)=> console.log(err))
+
 });
 
 router.get('/edit', isLoggedIn, (req, res, next) => {

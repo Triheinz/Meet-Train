@@ -89,48 +89,11 @@ router.get('/login', isLoggedOut, (req, res) => {
     res.render('login'); //Renderizara la ruta index, si escribes / puedes poner cualquier nombre, pero sera tu pagina principal.
 });
 
-router.post('/login', (req, res, next) => {
-    const { email, password } = req.body;
-    if (email === '' || password === '') {
-        res.render('login', {
-            errorMessage: 'Please enter username and password',
-
-        });
-        return;
-    }
-
-    User.findOne({ email })
-        .then((user) => {
-            console.log("user: ", user)
-            if (!user) {
-                res.render('login', {
-                    errorMessage: 'User not found',
-
-                });
-
-                return;
-            }
-            const passwordCorrect = bcrypt.compareSync(password, user.password);
-
-            if (passwordCorrect) {
-                console.log(req.session);
-
-                req.session.currentUser = user;
-                res.redirect('/');
-            } else {
-                res.render('login', {
-                    errorMessage: 'Incorrect email or password',
-
-                });
-            }
-        })
-        .catch((err) => next(err));
-    /* passport.authenticate('local', {
+router.post('/login', passport.authenticate("local",{
     successRedirect: '/private/profile',
     failureRedirect: '/login',
     passReqToCallback: true,
-}) */
-});
+}));
 
 router.get('/whoRwe', (req, res) => {
     res.render('whoRwe'); //Renderizara la ruta index, si escribes / puedes poner cualquier nombre, pero sera tu pagina principal.

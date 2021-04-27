@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
   Groups.find({})
     .then((groups) => {
       console.log(groups);
-      res.render('index', { groups }); //Renderizado de esa lista de escaladores, primer parametro es la lista  y el segundo la informacion que le queramos pasar
+      res.render('groups', { groups }); //Renderizado de esa lista de escaladores, primer parametro es la lista  y el segundo la informacion que le queramos pasar
     })
     .catch((error) => console.error(error));
 });

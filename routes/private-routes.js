@@ -7,15 +7,19 @@ const router = express.Router();
 
 
 router.get('/profile', isLoggedIn, (req, res, next) => {
-    res.render('profile', { user: req.user, isAdmin: req.user.role === 'Admin' });
+    res.render('profile', {
+      user: req.user,
+      isAdmin: req.user.role === 'Admin',
+      access: req.user,
+    });
 });
 
 router.get('/groups', isLoggedIn, (req, res, next) => {
-    res.render('groups', { user: req.user });
+    res.render('groups', { user: req.user, access: req.user });
 });
 
 router.get('/edit-group', isLoggedIn, (req, res, next) => {
-    res.render('edit-group', { user: req.user });
+    res.render('edit-group', { user: req.user, access: req.user });
 });
 
 router.post('/edit-group', uploader.single('image'), (req, res, next) => {
@@ -28,15 +32,15 @@ router.post('/edit-group', uploader.single('image'), (req, res, next) => {
             })
             .catch((error) => next(error));
     }
-    res.render('signup', { user: req.user });
+    res.render('signup', { user: req.user, access: req.user });
 });
 
 router.get('/partners', isLoggedIn, (req, res, next) => {
-    res.render('partners', { user: req.user });
+    res.render('partners', { user: req.user, access: req.user });
 });
 
 router.get('/edit', isLoggedIn, (req, res, next) => {
-    res.render('edit', { user: req.user });
+    res.render('edit', { user: req.user, access: req.user });
 });
 
 router.post('/edit', uploader.single('image'), (req, res, next) => {
@@ -49,7 +53,7 @@ router.post('/edit', uploader.single('image'), (req, res, next) => {
             })
             .catch((error) => next(error));
     }
-    res.render('signup', { user: req.user });
+    res.render('signup', { user: req.user, access: req.user });
 });
 
 module.exports = router;

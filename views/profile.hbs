@@ -1,17 +1,19 @@
 <div class="profiletip">
 <h1>Welcome {{user.username}}</h1>
-
+<div class='profilebody'>
 <img src={{user.image}} alt="profile-pic">
 <br>
-{{user.age}}
+<p>{{user.age}}</p>
 <br>
-{{user.city}}
+<p>{{user.city}}</p>
 <br>
+<p>{{user.description}}</p>
+<br>
+<p>{{user.sport}}</p>
+<br>
+<p>{{user.review}}</p>
+</div>
 
-<br>
-{{user.sport}}
-<br>
-{{user.review}}
 <a href="/private/edit">Editar perfil</a>
 </div>
 

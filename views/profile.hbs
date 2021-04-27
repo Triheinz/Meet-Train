@@ -1,20 +1,24 @@
 <div class="profiletip">
 <h1>Welcome {{user.username}}</h1>
+
 <div class='profilebody'>
-<img src={{user.image}} alt="profile-pic">
-<br>
-<p>{{user.age}}</p>
-<br>
-<p>{{user.city}}</p>
-<br>
-<p>{{user.description}}</p>
-<br>
-<p>{{user.sport}}</p>
-<br>
-<p>{{user.review}}</p>
+<img src={{user.image}} class="img-thumbnail" alt="profile-pic">
+
+  <div class ="procontent">
+  <p>Edad: {{user.age}}</p>
+  <br>
+  <p>Ciudad: {{user.city}}</p>
+  <br>
+  <p>Descripción: {{user.description}}</p>
+  <br>
+  <p>Deporte: {{user.sport}}</p>
+  <br>
+  <p>Reviews: {{user.review}}</p>
+  <br>
+  <a class='link' href="/private/edit">Editar perfil</a>
+  </div>
 </div>
 
-<a href="/private/edit">Editar perfil</a>
 </div>
 
 

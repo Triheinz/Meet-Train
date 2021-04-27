@@ -15,7 +15,11 @@ router.get('/profile', isLoggedIn, (req, res, next) => {
 });
 
 router.get('/groups', isLoggedIn, (req, res, next) => {
-    res.render('groups', { user: req.user, access: req.user });
+  Groups.find({})
+      .then((groups) => {
+      res.render('groups', { user: req.user, access: req.user, groups });
+    })
+    .catch((err) => console.log(err));
 });
 
 router.get('/edit-group', isLoggedIn, (req, res, next) => {
@@ -60,5 +64,6 @@ router.post('/edit', uploader.single('image'), (req, res, next) => {
     }
     res.render('signup', { user: req.user, access: req.user });
 });
+
 
 module.exports = router;

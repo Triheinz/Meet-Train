@@ -3,7 +3,6 @@ const passport = require('passport');
 const User = require('../models/User.model');
 const { isLoggedOut } = require('../middleware');
 const fileUploader = require('../config/cloudinary.config');
-
 const saltRounds = 10;
 
 //En este caso no se hace una instancia de la aplicacion, porque ya la tenemos en app.js aquí necesitaremos un router, un elemento que gestiona las diferentes rutas de este fichero.
@@ -11,11 +10,11 @@ const express = require('express');
 const router = express.Router(); //Lo importamos de express, vamos a crear una instancia de un Router, de  un elemento que nos permite gestionar las rutas de la aplicación
 
 router.get('/', isLoggedOut, (req, res) => {
-  res.render('index'); //Renderizara la ruta index, si escribes / puedes poner cualquier nombre, pero sera tu pagina principal.
+    res.render('index'); //Renderizara la ruta index, si escribes / puedes poner cualquier nombre, pero sera tu pagina principal.
 });
 
 router.get('/signup', isLoggedOut, (req, res) => {
-  res.render('signup'); //Renderizara la ruta index, si escribes / puedes poner cualquier nombre, pero sera tu pagina principal.
+    res.render('signup'); //Renderizara la ruta index, si escribes / puedes poner cualquier nombre, pero sera tu pagina principal.
 });
 
 router.post('/signup', fileUploader.single('image'), (req, res) => {
@@ -43,6 +42,7 @@ router.post('/signup', fileUploader.single('image'), (req, res) => {
     });
   }
   console.log('dataBase.findOne');
+
   User.findOne({ username }).then((user) => {
     console.log('insideFinOne');
     if (user) {
@@ -79,12 +79,13 @@ router.post('/signup', fileUploader.single('image'), (req, res) => {
           errorMessage: 'Server error. Try again.',
           access: req.user,
         });
-      });
+      })
+    console.log('dataBase.findOne');
+    });
   });
-});
 
 router.get('/login', isLoggedOut, (req, res) => {
-  res.render('login'); //Renderizara la ruta index, si escribes / puedes poner cualquier nombre, pero sera tu pagina principal.
+    res.render('login'); //Renderizara la ruta index, si escribes / puedes poner cualquier nombre, pero sera tu pagina principal.
 });
 
 router.post('/login', (req, res, next) => {
@@ -96,6 +97,7 @@ router.post('/login', (req, res, next) => {
     });
     return;
   }
+  console.log("body: ", req.body)
   console.log("email: ", email)
   console.log('password: ', password);
   User.findOne({ email })
@@ -111,19 +113,18 @@ router.post('/login', (req, res, next) => {
       const passwordCorrect = crypt.compareSync(password, user.password);
 
       if (passwordCorrect) {
-        console.log(req.session);
+                console.log(req.session);
 
-        req.session.currentUser = user; // Triggers creation of the session and cookie
-        res.redirect('/');
-      } else {
-        res.render('login', {
-          errorMessage: 'Incorrect email or password',
-          access: req.user,
-        });
-      }
-    })
-    .catch((err) => next(err));
-  /* passport.authenticate('local', {
+                req.session.currentUser = user; // Triggers creation of the session and cookie
+                res.redirect('/');
+            } else {
+                res.render('login', {
+                    errorMessage: 'Incorrect email or password',
+                });
+            }
+        })
+        .catch((err) => next(err));
+    /* passport.authenticate('local', {
     successRedirect: '/private/profile',
     failureRedirect: '/login',
     passReqToCallback: true,
@@ -131,12 +132,12 @@ router.post('/login', (req, res, next) => {
 });
 
 router.get('/whoRwe', (req, res) => {
-  res.render('whoRwe'); //Renderizara la ruta index, si escribes / puedes poner cualquier nombre, pero sera tu pagina principal.
+    res.render('whoRwe'); //Renderizara la ruta index, si escribes / puedes poner cualquier nombre, pero sera tu pagina principal.
 });
 
 router.get('/logout', (req, res) => {
-  req.logout();
-  res.redirect('/');
+    req.logout();
+    res.redirect('/');
 });
 
 module.exports = router; //exportar el router, lo debemos importar a app.js

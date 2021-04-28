@@ -53,7 +53,7 @@ router.get('/edit', isLoggedIn, (req, res, next) => {
         })
 
 router.post('/edit', uploader.single('image'), (req, res, next) => {
-    const { username, password, email, description, age, city, sport, role, review } = req.body;
+    const { username, password, email, description, age, genero, city, sport,  review } = req.body;
     if (req.file) {
         User.findOneAndUpdate({ _id: req.user._id }, {
           username: username,
@@ -62,16 +62,16 @@ router.post('/edit', uploader.single('image'), (req, res, next) => {
           email,
           description,
           age,
+          genero,
           city,
           sport,
-          role,
           review }, { new: true })
             .then(() => {
                 res.redirect('/private/profile');
             })
             .catch((error) => next(error));
     }
-    
+      res.render('edit', { user: req.user });
 });
 
 

@@ -1,18 +1,20 @@
-<h2>edit profile</h2>
+<div class='editall'>
+<h2>{{user.username}} Edición</h2>
+<p class="descriptedit">Edita los campos deseados de tu perfil</p>
 
 <form method="POST" action="/private/edit" enctype="multipart/form-data">
-    <div class="contenedor-formulario">
-        <p class="parrafo-signup">Nombre:</p>
+    <div class="formall">
+        <p class="parrafo-edituser">Nombre:</p>
         <input class="input-text" name="username" type="text" placeholder="Escribe tu nombre" value="{{user.username}}">
-        <p class="parrafo-signup">Contraseña:</p>
+        <p class="parrafo-edituser">Contraseña:</p>
         <input class="input-text" name="password" type="password" placeholder="Elije tu contraseña" value="{{user.password}}">
-        <p class="parrafo-signup">Correo Electronico:</p>
+        <p class="parrafo-edituser">Correo Electronico:</p>
         <input class="input-text" name="email" type="email" placeholder="¿Cual es tu Email?" value="{{user.email}}">
-        <p class="parrafo-signup">Edad:</p>
+        <p class="parrafo-edituser">Edad:</p>
         <input class="input-text" name="age" type="text" placeholder="¿Que edad tienes?" value="{{user.age}}">
-        <p class="parrafo-signup">Ciudad:</p>
+        <p class="parrafo-edituser">Ciudad:</p>
         <input class="input-text" name="city" type="text" placeholder="¿Donde vives?" value="{{user.city}}">
-        <p class="parrafo-signup">Sexo:</p>
+        <p class="parrafo-edituser">Sexo:</p>
         <div class="contenedor-sexo">
             <input type="radio" name="genero" value="hombre">
             <label for="male">Hombre</label><br>
@@ -21,7 +23,7 @@
             <input type="radio" name="genero" value="otro">
             <label for="otro">Otro</label><br>
         </div>
-        <p class="parrafo-signup">¿Que deportes te gusta practicar?</p>
+        <p class="parrafo-edituser">¿Que deportes te gusta practicar?</p>
         <div class="div-deportes">
             <div class="div-deportes-seccion1">
                 <div class="surf">
@@ -56,13 +58,14 @@
         <textarea name="description" rows="4" cols="50" placeholder="Añade una descripción">{{user.description}}</textarea>
         <div class="mb-3 needs-validation">
             <label for="profile-pic" class="col-form-label">Cambia tu foto perfil</label>
-            <input type="file" class="form-control" id="profile-pic" aria-describedby="profile-pic" name="image"
-                required>
+            <input type="file" class="form-control" id="profile-pic" aria-describedby="profile-pic" name="image">
             <div id="profile-pic" class="form-text">Agrega una foto de perfil.</div>
 
         </div>
         <br>
-        <button type="submit" id="botton-signup" class="btn btn-primary">Editar</button>
-</form>
+        <button type="submit" id="botton-edituser" class="btn btn-primary">Editar</button>
+      </form>
+    </div>
+  </div>
 </div>
-</div>
+

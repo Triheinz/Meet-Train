@@ -11,19 +11,21 @@
     
     .div-grupos {
         display: flex;
-        justify-content: center;
-        width: 100vw;
+        flex-direction: column;
+        justify-content: space-around;
+        border: 2px solid rgb(192, 192, 192);
+        margin-top: 190px;
     }
     
     .contenedor-grupo {
         width: 440px;
         height: 500px;
-        margin-top: 250px;
         display: flex;
         justify-content: center;
         flex-direction: column;
         align-items: center;
         border: 5px solid rgb(106, 54, 148);
+        margin: 15px;
     }
     
     img {
@@ -54,4 +56,57 @@
     
     .edit-grupos {
         margin-top: 80px;
+    }
+    
+    .div-grupos2 {
+        display: flex;
+        justify-content: center;
+        width: 100vw;
+    }
+    
+    .contenedor-grupo2 {
+        width: 440px;
+        height: 550px;
+        margin-top: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #0066ff;
+    }
+    
+    .imagen-crear {
+        margin-top: 5px;
+        margin-bottom: 10px;
+        box-shadow: 0px 0px 5px #0066ff;
+    }
+    
+    .texto2 {
+        width: 400px;
+        text-align: center;
+    }
+    
+    .div-input {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    input {
+        outline: none;
+        border: 0.5px solid grey;
+        margin-left: 15px;
+        border-radius: 5px;
+        padding-left: 10px;
+    }
+    
+    .boton-crear-grupo {
+        border-radius: 50px;
+        width: 100px;
+        height: 30px;
+        color: white;
+        font-size: 18px;
+        background-color: rgb(23, 123, 117);
+        text-align: center;
+        margin-top: 5%;
+        margin-bottom: 5%;
     }

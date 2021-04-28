@@ -1,7 +1,9 @@
 <h2 class="titulo-grupos">Grupos</h2>
     <a class="boton" href="/private/crear-group">Crear grupo</a>
+    
+     <div class="div-grupos">
     {{#each groups}}
-    <div class="div-grupos">
+
     <div class="contenedor-grupo">
         <img src="{{this.image}}" alt="imagen">
         <br>
@@ -10,10 +12,11 @@
         <div class="texto">
         <p>{{description}}</p>
         <br>
-        <a class="editar" href="/private/edit-group">Editar</a>
+        <a class="editar" href="/private/{{_id}}/edit-group">Editar</a>
         </div>
     </div>
-</div>
+
     {{/each}}
+    </div>
 
 

@@ -2,8 +2,8 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const groupSchema = new Schema({
-    admin: {type: Schema.Types.ObjectId, ref: "User"},
-    image: { type: String, default: '/public/images/climbing.jpeg' },
+    admin: { type: Schema.Types.ObjectId, ref: "User" },
+    image: { type: String, default: '/images/climbing.jpeg' },
     name: { type: String, required: true },
     description: {
         type: String,
@@ -13,8 +13,8 @@ const groupSchema = new Schema({
         type: String,
         maxlength: 1000,
     },
-    city: { type: String, required: true },
-    sport: [{ type: String, required: true }],
+    city: { type: String },
+    sport: [{ type: String }],
     members: [{ type: Schema.Types.ObjectId, ref: 'User' }],
     activitiesPics: [{ type: String }],
 }, { timestamps: true });

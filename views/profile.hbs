@@ -13,9 +13,10 @@
   <br>
   <p><span class='procamps'>Descripción:</span> {{user.description}}</p>
   <br>
-  <p><span class='procamps'>Deporte:</span> {{user.sport}}</p>
-  <br>
-  <p><span class='procamps'>Reviews:</span> {{user.review}}</p>
+  <p><span class='procamps'>Deporte:</span>
+  {{#each user.sport}}
+  {{this}}
+  {{/each}}</p>
   <br>
   <a class='link' href="/private/edit">Editar perfil</a>
   </div>

@@ -28,7 +28,7 @@ router.post('/signup', fileUploader.single('image'), (req, res) => {
         sports,
         description,
     } = req.body;
-
+      console.log (sports)
     if (!username || !password) {
         res.render('signup', {
             errorMessage: 'Username and password are required.',

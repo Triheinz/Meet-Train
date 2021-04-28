@@ -49,13 +49,8 @@ router.get('/partners', isLoggedIn, (req, res, next) => {
 });
 
 router.get('/edit', isLoggedIn, (req, res, next) => {
-    const { id } = req.params;
-    User.findOne({ _id: req.user._id })
-        .then(user => {
-            res.render('edit', { user: req.user, access: req.user });
+    res.render('edit', { user: req.user, access: req.user });
         })
-        .catch((error) => console.error(error));
-});
 
 router.post('/edit', uploader.single('image'), (req, res, next) => {
     const { username, password, email, description, age, city, sport, role, review } = req.body;
@@ -63,20 +58,20 @@ router.post('/edit', uploader.single('image'), (req, res, next) => {
         User.findOneAndUpdate({ _id: req.user._id }, {
           username: username,
           image: req.file.path,
-          password: password,
-          email: email,
-          description: description,
-          age:age,
-          city: city,
-          sport: sport,
-          role: role,
+          password,
+          email,
+          description,
+          age,
+          city,
+          sport,
+          role,
           review }, { new: true })
             .then(() => {
                 res.redirect('/private/profile');
             })
             .catch((error) => next(error));
     }
-    res.render('profile', { user: req.user, access: req.user });
+    
 });
 
 

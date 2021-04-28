@@ -15,11 +15,11 @@ router.get('/profile', isLoggedIn, (req, res, next) => {
 });
 
 router.get('/groups', isLoggedIn, (req, res, next) => {
-  Groups.find({})
-      .then((groups) => {
-      res.render('groups', { user: req.user, access: req.user, groups });
-    })
-    .catch((err) => console.log(err));
+    Groups.find({})
+        .then((groups) => {
+            res.render('groups', { user: req.user, access: req.user, groups });
+        })
+        .catch((err) => console.log(err));
 });
 
 router.get('/edit-group', isLoggedIn, (req, res, next) => {
@@ -41,28 +41,32 @@ router.post('/edit-group', uploader.single('image'), (req, res, next) => {
 
 router.get('/partners', isLoggedIn, (req, res, next) => {
     User.find({})
-    .then((users)=>{
-      res.render('partners', { user: req.user, access: req.user, users });
-    })
-    .catch((err)=> console.log(err))
+        .then((users) => {
+            res.render('partners', { user: req.user, access: req.user, users });
+        })
+        .catch((err) => console.log(err))
 
 });
 
 router.get('/edit', isLoggedIn, (req, res, next) => {
-    res.render('edit', { user: req.user, access: req.user });
+    const { id } = req.params;
+    User.findOne({ _id: req.user._id })
+        .then(user => {
+            res.render('edit', { user: req.user, access: req.user });
+        })
+        .catch((error) => console.error(error));
 });
 
 router.post('/edit', uploader.single('image'), (req, res, next) => {
-    const { username } = req.body;
+    const { username, password, email, image, description, age, city, sport, role, review } = req.body;
     if (req.file) {
-        // User.findOneAndUpdate({ _id: req.user._id }, { username, profile_pic: req.file.path}, )
-        User.findOneAndUpdate({ _id: req.user._id }, { username: username, image: req.file.path }, { new: true })
+        User.findOneAndUpdate({ _id: req.user._id }, { username: username, image: req.file.path, password, email, description, age, city, sport, role, review }, { new: true })
             .then(() => {
-                res.redirect('/private-routes/signup');
+                res.redirect('/private/profile');
             })
             .catch((error) => next(error));
     }
-    res.render('signup', { user: req.user, access: req.user });
+    res.render('profile', { user: req.user, access: req.user });
 });
 
 

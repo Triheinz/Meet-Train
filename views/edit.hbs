@@ -1,18 +1,68 @@
 <h2>edit profile</h2>
 
-<div class="profiletip">
-<h1>Welcome {{user.username}}</h1>
+<form method="POST" action="/signup" enctype="multipart/form-data">
+    <div class="contenedor-formulario">
+        <p class="parrafo-signup">Nombre:</p>
+        <input class="input-text" name="username" type="text" placeholder="Escribe tu nombre" value="{{user.username}}">
+        <p class="parrafo-signup">Contraseña:</p>
+        <input class="input-text" name="password" type="password" placeholder="Elije tu contraseña" value="{{user.password}}">
+        <p class="parrafo-signup">Correo Electronico:</p>
+        <input class="input-text" name="email" type="email" placeholder="¿Cual es tu Email?" value="{{user.email}}">
+        <p class="parrafo-signup">Edad:</p>
+        <input class="input-text" name="age" type="text" placeholder="¿Que edad tienes?" value="{{user.age}}">
+        <p class="parrafo-signup">Ciudad:</p>
+        <input class="input-text" name="city" type="text" placeholder="¿Donde vives?" value="{{user.city}}">
+        <p class="parrafo-signup">Sexo:</p>
+        <div class="contenedor-sexo">
+            <input type="radio" name="genero" value="hombre">
+            <label for="male">Hombre</label><br>
+            <input type="radio" name="genero" value="mujer">
+            <label for="female">Mujer</label><br>
+            <input type="radio" name="genero" value="otro">
+            <label for="otro">Otro</label><br>
+        </div>
+        <p class="parrafo-signup">¿Que deportes te gusta practicar?</p>
+        <div class="div-deportes">
+            <div class="div-deportes-seccion1">
+                <div class="surf">
+                    <input type="checkbox" name="sports" value="surf">
+                    <label for="surf">Surf</label><br>
+                </div>
+                <div>
+                    <input type="checkbox" name="sports" value="escalada">
+                    <label for="escalada">Escalada</label><br>
+                </div>
+                <div>
+                    <input type="checkbox" name="sports" value="correr">
+                    <label for="correr">Correr</label>
+                </div>
+            </div>
+            <div class="div-deportes-seccion2">
+                <div>
+                    <input type="checkbox" name="sports" value="ciclismo">
+                    <label for="ciclismo">Ciclismo</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="sports" value="paddel">
+                    <label for="paddel">Paddel</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="sports" value="futbol">
+                    <label for="futbol">Futbol</label>
+                </div>
+            </div>
+        </div>
+        <label for="descripcion">¿Que te gusta hacer?</label>
+        <textarea name="description" rows="4" cols="50" placeholder="Añade una descripción">{{user.description}}</textarea>
+        <div class="mb-3 needs-validation">
+            <label for="profile-pic" class="col-form-label">Cambia tu foto perfil</label>
+            <input type="file" class="form-control" id="profile-pic" aria-describedby="profile-pic" name="image"
+                required>
+            <div id="profile-pic" class="form-text">Agrega una foto de perfil.</div>
 
-<img src={{user.image}} alt="profile-pic">
-<br>
-{{user.age}}
-<br>
-{{user.city}}
-<br>
-
-<br>
-{{user.sport}}
-<br>
-{{user.review}}
-
+        </div>
+        <br>
+        <button type="submit" id="botton-signup" class="btn btn-primary">Editar</button>
+</form>
+</div>
 </div>

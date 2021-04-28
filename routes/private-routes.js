@@ -72,6 +72,26 @@ router.post('/:id/edit-group', uploader.single('image'), (req, res, next) => {
     res.render('edit-group', { user: req.user, access: req.user });
 });
 
+router.post('/:id/delete', (req, res) => {
+    const { id } = req.params; //Cojemos el id de la propia ruta.
+
+    Groups.findOneAndDelete({ _id: id }) //Primer parametros es el id
+        .then(() => {
+            res.redirect("/private/groups"); //Luego redirigeme a /climbers.
+        })
+        .catch(error => console.error(error));
+})
+
+
+
+
+
+
+
+
+
+
+
 router.get('/partners', isLoggedIn, (req, res, next) => {
     User.find({})
         .then((users) => {

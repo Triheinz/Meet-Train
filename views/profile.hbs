@@ -19,7 +19,9 @@
   {{/each}}</p>
   <br>
   <a class='link' href="/private/edit">Editar perfil</a>
-  </div>
+  <form action="/private/{{user._id}}/delete" method="POST">
+        <button type="submit">Elimina tu perfil</button>
+        </form>
 </div>
 
 </div>

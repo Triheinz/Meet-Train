@@ -72,15 +72,6 @@ router.post('/:id/edit-group', uploader.single('image'), (req, res, next) => {
     res.render('edit-group', { user: req.user, access: req.user });
 });
 
-
-
-
-
-
-
-
-
-
 router.get('/partners', isLoggedIn, (req, res, next) => {
     User.find({})
         .then((users) => {
@@ -114,6 +105,14 @@ router.post('/edit', uploader.single('image'), (req, res, next) => {
         .catch((error) => next(error));
 
 
+});
+
+router.post('/:id/delete', (req, res) => {
+  User.findByIdAndRemove(req.params.id)
+    .then(() => {
+      res.redirect('/');
+    })
+    .catch((error) => console.error(error));
 });
 
 

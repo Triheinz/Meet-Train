@@ -1,3 +1,19 @@
-.partners {
+.allpartners {
+    display:flex;
+    justify-content: center;
     margin-top: 80px;
+}
+
+.btn btn-success{
+  border-radius: 50px;
+    width: 250px;
+    height: 60px;
+    color: white;
+    font-size: 18px;
+    background-color: rgb(23, 123, 117);
+    margin-top: 20px;
+    margin-left: 0px;
+    text-decoration: none;
+    text-align: center;
+    padding-top: 13.5px;
 }

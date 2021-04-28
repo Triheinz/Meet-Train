@@ -16,7 +16,7 @@ const userSchema = new Schema(
     genero: { type: String, require: true },
     city: { type: String },
     sport: [{ type: String, require: true }],
-    review: [{ type: Schema.Types.ObjectId, ref: 'Review' }],
+    
   },
   { timestamps: true } //a que hora y fecha se crean las cosas
 );

@@ -1,0 +1,20 @@
+<h2>Crear Grupo</h2>
+<div class="div-grupos2">
+<div class="contenedor-grupo2">
+<form action="/private/crar-group" method="POST">
+<img src="/images/climbing.jpeg" alt="">
+<label for="climber-name">Nombre:</label>
+<input type="text" name="name" placeholder="Escribe el nombre del grupo">
+<div class="texto2">
+<label for="climber-description">Descripción:</label>
+<input type="text" name="description" placeholder="Escribe la descripcion del grupo">
+</div>
+<button type="submit">Crear</button>
+</form>
+</div>
+</div>
+
+{{#if error}}
+<p>Ha ocurrido un error</p>
+{{/if}}
+</form>

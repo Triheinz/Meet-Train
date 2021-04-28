@@ -22,6 +22,10 @@ router.get('/groups', isLoggedIn, (req, res, next) => {
         .catch((err) => console.log(err));
 });
 
+router.get('/crear-group', isLoggedIn, (req, res, next) => {
+    res.render('crear-group', { user: req.user, access: req.user });
+});
+
 router.get('/edit-group', isLoggedIn, (req, res, next) => {
     res.render('edit-group', { user: req.user, access: req.user });
 });
@@ -50,28 +54,29 @@ router.get('/partners', isLoggedIn, (req, res, next) => {
 
 router.get('/edit', isLoggedIn, (req, res, next) => {
     res.render('edit', { user: req.user, access: req.user });
-        })
+})
 
 router.post('/edit', uploader.single('image'), (req, res, next) => {
-    const { username, password, email, description, age, city, sport, role, review } = req.body;
+    const { username, password, email, description, age, genero, city, sport, review } = req.body;
     if (req.file) {
         User.findOneAndUpdate({ _id: req.user._id }, {
-          username: username,
-          image: req.file.path,
-          password,
-          email,
-          description,
-          age,
-          city,
-          sport,
-          role,
-          review }, { new: true })
+                username: username,
+                image: req.file.path,
+                password,
+                email,
+                description,
+                age,
+                genero,
+                city,
+                sport,
+                review
+            }, { new: true })
             .then(() => {
                 res.redirect('/private/profile');
             })
             .catch((error) => next(error));
     }
-    
+    res.render('edit', { user: req.user });
 });
 
 

@@ -16,10 +16,14 @@
   display: flex;
   color: rgb(71, 71, 71);
 }
+.procamps{
+  color: rgb(23, 123, 117);
+}
 .procontent{
   text-align: justify;
   margin-left: 30px;
 }
+
 .link{
   align-self: center;
 }

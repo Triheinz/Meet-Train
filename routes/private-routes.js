@@ -58,9 +58,19 @@ router.get('/edit', isLoggedIn, (req, res, next) => {
 });
 
 router.post('/edit', uploader.single('image'), (req, res, next) => {
-    const { username, password, email, image, description, age, city, sport, role, review } = req.body;
+    const { username, password, email, description, age, city, sport, role, review } = req.body;
     if (req.file) {
-        User.findOneAndUpdate({ _id: req.user._id }, { username: username, image: req.file.path, password, email, description, age, city, sport, role, review }, { new: true })
+        User.findOneAndUpdate({ _id: req.user._id }, {
+          username: username,
+          image: req.file.path,
+          password: password,
+          email: email,
+          description: description,
+          age:age,
+          city: city,
+          sport: sport,
+          role: role,
+          review }, { new: true })
             .then(() => {
                 res.redirect('/private/profile');
             })

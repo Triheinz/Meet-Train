@@ -1,7 +1,57 @@
-.div-grupos {
-    margin-top: 80px;
-}
-
-.edit-grupos {
-    margin-top: 80px;
-}
+    /* -------grupos-------- */
+    
+    .titulo-grupos {
+        text-align: center;
+        margin-top: 100px;
+        position: absolute;
+        color: rgb(106, 54, 148);
+        font-size: 75px;
+        font-family: 'Acme';
+    }
+    
+    .div-grupos {
+        display: flex;
+        justify-content: center;
+        width: 100vw;
+    }
+    
+    .contenedor-grupo {
+        width: 440px;
+        height: 500px;
+        margin-top: 250px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        border: 5px solid rgb(106, 54, 148);
+    }
+    
+    img {
+        height: 300px;
+        width: 300px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-top: 10px;
+    }
+    
+    .texto {
+        width: 400px;
+        text-align: center;
+    }
+    
+    .editar {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .boton {
+        position: absolute;
+        display: flex;
+        top: 90px;
+        left: 20px;
+    }
+    /* ------editar grupos-------- */
+    
+    .edit-grupos {
+        margin-top: 80px;
+    }

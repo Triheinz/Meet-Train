@@ -1,11 +1,21 @@
-<h1>Grupos</h1>
-<div class="div-grupos">
-<a href="/private/edit-group">editar grupos</a>
-
-{{#each groups}}
-
-{{name}}
-{{description}}
-
-{{/each}}
+<h2 class="titulo-grupos">Grupos</h2>
+<div class="boton">
+    <a href="/private/crear-grupo" id="botton-signup" class="btn btn-primary">Crear Grupo</a>
 </div>
+    {{#each groups}}
+    <div class="div-grupos">
+    <div class="contenedor-grupo">
+        <img src="{{this.image}}" alt="imagen">
+        <br>
+        <h3>{{name}}</h3>
+        <br>
+        <div class="texto">
+        <p>{{description}}</p>
+        <br>
+        <a class="editar" href="/private/edit-group">Editar</a>
+        </div>
+    </div>
+</div>
+    {{/each}}
+
+

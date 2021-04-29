@@ -25,7 +25,7 @@ router.post('/signup', fileUploader.single('image'), (req, res) => {
         age,
         city,
         genero,
-        sports,
+        sport: sports,
         description,
     } = req.body;
       console.log (sports)
@@ -55,32 +55,31 @@ router.post('/signup', fileUploader.single('image'), (req, res) => {
         const picture = req.file.path;
 
         User.create({
-                username,
-                password: hashPass,
-                email,
-                age,
-                city,
-                genero,
-                sports,
-                description,
-                picture,
-            })
-            .then((newUser) => {
-                console.log('user created');
-                req.login(newUser, (error) => {
-                    if (error) {
-                        next(error);
-                    }
-                    return res.redirect('/private/profile');
-                });
-            })
-            .catch((error) => {
-                console.log(error);
-                return res.render('signup', {
-                    errorMessage: 'Server error. Try again.',
-
-                });
-            })
+          username,
+          password: hashPass,
+          email,
+          age,
+          city,
+          genero,
+          sport: sports,
+          description,
+          picture,
+        })
+          .then((newUser) => {
+            console.log('user created');
+            req.login(newUser, (error) => {
+              if (error) {
+                next(error);
+              }
+              return res.redirect('/private/profile');
+            });
+          })
+          .catch((error) => {
+            console.log(error);
+            return res.render('signup', {
+              errorMessage: 'Server error. Try again.',
+            });
+          });
         console.log('dataBase.findOne');
     });
 });

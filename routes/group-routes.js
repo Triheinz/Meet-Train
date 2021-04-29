@@ -2,8 +2,7 @@ const express = require('express');
 const Groups = require('../models/Groups.model');
 const router = express.Router();
 
-//Devolvemos un views con todos los escaladores.
-//LLamamos al modelo de Climber, y buscar los escaladores
+
 router.get('/', (req, res) => {
     Groups.find({})
         .then((groups) => {

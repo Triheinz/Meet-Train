@@ -57,13 +57,16 @@ router.get('/:id/edit-group', isLoggedIn, (req, res, next) => {
 router.post('/:id/edit-group', uploader.single('image'), (req, res, next) => {
     const { name, description } = req.body;
     console.log(req)
-    Groups.findByIdAndUpdate(req.params.id, { image: req.file ? req.file.path : req.user.image, description, name }, { new: true })
-        .then((group) => {
-            res.redirect(`/private/groups/`);
+    Groups.findByIdAndUpdate(req.params.id, {
+        image: req.file ? req.file.path : req.user.image,
+        description,
+        name }, { new: true })
+        .then((groups) => {
+            res.redirect('/private/groups/');
         })
         .catch((error) => next(error));
 
-    res.render('edit-group', { user: req.user, access: req.user });
+    res.render('groups', { user: req.user, access: req.user });
 });
 
 router.post('/:id/delete', (req, res) => {

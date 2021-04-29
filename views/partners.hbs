@@ -3,43 +3,47 @@
 
     <div class='allpartners'>
         {{#each users}}
+        <div class="mega-contenido">
+            <div class="contenido">
+                <img src={{image}} class="img-thumbnail" alt="profile-pic">
+                <br>
+                <p> <span class='procamps'>Nombre:</span> {{username}}</p>
+                <br>
+                <p> <span class='procamps'>Edad:</span> {{age}}</p>
+                <br>
+                <p> <span class='procamps'>Género:</span> {{genero}}</p>
+                <br>
+                <p><span class='procamps'>Ciudad:</span> {{city}}</p>
+                <br>
+                <p><span class='procamps'>Descripción:</span> {{description}}</p>
+                <br>
+                <p><span class='procamps'>Deporte:{{sport}}</span>
 
-        <div class="procontent">
-            <p> <span class='procamps'>Nombre:</span> {{username}}</p>
-            <br>
-            <p> <span class='procamps'>Edad:</span> {{age}}</p>
-            <br>
-            <p> <span class='procamps'>Género:</span> {{genero}}</p>
-            <br>
-            <p><span class='procamps'>Ciudad:</span> {{city}}</p>
-            <br>
-            <p><span class='procamps'>Descripción:</span> {{description}}</p>
-            <br>
-            <p><span class='procamps'>Deporte:{{sport}}</span>
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                        data-bs-target="#contact{{@index}}">
+                        Contactar
+                    </button>
 
-                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#contact{{@index}}">
-                    Contactar
-                </button>
-
-            <div class="modal fade" id="contact{{@index}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-border">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Contacto</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <span class="contact-email-phone"><span class="card-text">Email:</span>
-                                    {{email}}</span>
+                <div class="modal fade" id="contact{{@index}}" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-border">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Contacto</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <span class="contact-email-phone"><span class="card-text">Email:</span>
+                                        {{email}}</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
     {{/each}}
 </div>

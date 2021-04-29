@@ -1,72 +1,135 @@
-*{
-  margin: 0px;
-  border:0px;
-  box-sizing: border-box;
+* {
+    margin: 0px;
+    border: 0px;
+    box-sizing: border-box;
 }
-.profiletip h1{
-  text-align: center;
+
+.p {
+    margin-right: 55px;
+    margin-top: 10px;
+}
+
+.div-p {
+    display: flex;
+    flex-direction: row;
+}
+
+li {
+    margin-right: 30px;
+}
+
+.deportes {
+    display: flex;
+    flex-direction: row;
+}
+
+.link {
+    border-radius: 50px;
+    color: rgb(106, 54, 148);
+    font-size: 24px;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    margin-left: 0%;
+    text-decoration: none;
+    box-shadow: 2px solid black;
+}
+
+.boton-eliminar {
+    border-radius: 50px;
+    width: 100px;
+    height: 20px;
+    color: white;
+    font-size: 12px;
+    background-color: rgb(23, 123, 117);
+    text-align: center;
+    margin-left: 30px;
+}
+
+.botton-eliminar:hover {
+    background-color: rgb(20, 92, 87);
+}
+
+.div-botones {
+    width: 400px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.profiletip h1 {
+    text-align: center;
     color: rgb(106, 54, 148);
     font-size: 75px;
     margin-top: 50px;
     font-family: 'Acme';
     margin-top: 100px;
 }
-.profiletip img{
-  width: 400px;
-  height: 300px;
-}
-.profilebody{
-  margin: 0px 60px 60px 60px;
-  display: flex;
-  color: rgb(71, 71, 71);
-}
-.procamps{
-  color: rgb(23, 123, 117);
-}
-.procontent{
-  text-align: justify;
-  margin-left: 30px;
+
+.profiletip img {
+    width: 400px;
+    height: 300px;
 }
 
-
-.outformedit{
-  display: flex;
-  justify-content: center;
-  margin-top: 60px;
+.profilebody {
+    margin: 0px 60px 60px 60px;
+    display: flex;
+    color: rgb(71, 71, 71);
 }
-.editall{
+
+.procamps {
+    color: rgb(23, 123, 117);
+}
+
+.procontent {
+    text-align: justify;
+    margin-left: 30px;
+}
+
+.outformedit {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.editall {
     display: flex;
     justify-content: center;
     outline: none;
 }
-.editall h2{
-  position: absolute;
-  text-align: center;
+
+.editall h2 {
+    position: absolute;
+    text-align: center;
     color: rgb(106, 54, 148);
     font-size: 60px;
     margin-top: 50px;
     font-family: 'Acme';
     margin-top: 100px;
 }
-.formall{
+
+.formall {
     width: 400px;
     height: 800px;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin-top:180px;
+    margin-top: 180px;
 }
-.descriptedit{
+
+.descriptedit {
     color: rgb(71, 71, 71);
     font-size: 20px;
     position: absolute;
     top: 32%;
     left: 39.5%;
 }
+
 .parrafo-edituser {
     margin: 0%;
     padding-left: 10px;
 }
+
 .input-text {
     width: 100%;
     margin-top: 0.5%;
@@ -76,9 +139,11 @@
     border-radius: 5px;
     padding-left: 10px;
 }
+
 .input-text:focus {
     box-shadow: 0px 0px 5px #0066ff;
 }
+
 #botton-edituser {
     border-radius: 50px;
     width: 200px;
@@ -89,9 +154,11 @@
     text-align: center;
     margin-left: 80px;
 }
+
 #botton-edituser:hover {
     background-color: rgb(20, 92, 87);
 }
+
 textarea {
     resize: none;
     border: 1px solid grey;
@@ -104,4 +171,3 @@ textarea {
 textarea:focus {
     box-shadow: 0px 0px 5px #0066ff;
 }
-

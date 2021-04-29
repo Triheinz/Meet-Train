@@ -5,10 +5,7 @@ const mongoose = require('mongoose'); //Paquete para conectarme a la base de dat
 const DB_NAME = 'meet-train-app'; //nombre de la base de datos que se va a crear.
 const bcrypt = require('bcryptjs');
 const saltRounds = 10;
-
 let userIds = [];
-
-
 mongoose
     .connect(`mongodb://localhost/${DB_NAME}`) //Nos conectamos a la base de datos y nos devuelve una promesa.
     .then((db) => {

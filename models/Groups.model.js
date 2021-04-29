@@ -3,7 +3,8 @@ const Schema = mongoose.Schema;
 
 const groupSchema = new Schema({
     admin: { type: Schema.Types.ObjectId, ref: "User" },
-    image: { type: String, default: '/images/climbing.jpeg' },
+    image: { type: String },
+    email: { type: String },
     name: { type: String, required: true },
     description: {
         type: String,

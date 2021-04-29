@@ -1,7 +1,7 @@
 <h2 class="titulo-grupos">Crear Grupo</h2>
 <div class="div-grupos2">
 
-    <form action="/private/crear-group" method="POST">
+    <form action="/private/crear-group" method="POST" enctype="multipart/form-data">
         <div class="contenedor-grupo2">
             <div class="image-crear">
                 <label for="profile-pic" class="col-form-label">Foto de perfil</label>
@@ -12,6 +12,10 @@
             <div class="div-input">
                 <label for="climber-name">Nombre:</label>
                 <input type="text" name="name" placeholder="Nombre del grupo">
+            </div>
+            <div class="div-input">
+                <label for="climber-name">Email:</label>
+                <input type="email" name="email" placeholder="Email de contacto">
             </div>
             <div class="texto2">
                 <label for="descripcion">¿Describe el contenido de este grupo?</label>

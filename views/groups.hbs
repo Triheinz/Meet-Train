@@ -1,11 +1,12 @@
-<h2 class="titulo-grupos">Grupos</h2>
-    <a class="boton" href="/private/crear-group">Crear grupo</a>
+<h2 class="titulo-grupos">Eventos</h2>
+
+    <a class="boton-crear" href="/private/crear-group">Crear Evento</a>
     
      <div class="div-grupos">
     {{#each groups}}
 
     <div class="contenedor-grupo">
-        <img src="{{this.image}}" alt="imagen">
+        <img class="img" src="{{this.image}}" alt="imagen">
         <br>
         <h3>{{name}}</h3>
         <br>
@@ -15,9 +16,9 @@
         <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#contact{{@index}}">
                     Contactar
                 </button>
-        <a class="editar" href="/private/{{_id}}/edit-group">Editar</a>
+        <a class="editar-2" href="/private/{{_id}}/edit-group">Editar</a>
         <form action="/private/{{id}}/delete" method="POST">
-        <button type="submit">Eliminar</button>
+        <button class="boton-eliminar" type="submit">Eliminar</button>
         </form>
         </div>
     </div>

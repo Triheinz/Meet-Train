@@ -12,12 +12,13 @@
     display: flex;
     flex-wrap: wrap;
     margin-top: 200px;
+    justify-content: center;
 }
 
 .contenido {
-    width: 400px;
-    height: 700px;
-    margin: 10px 10px;
+    width: 300px;
+    height: 650px;
+    margin: 30px 30px;
     display: flex;
     justify-content: center;
     flex-direction: column;

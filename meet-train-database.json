@@ -1,0 +1,133 @@
+[{
+  "_id": {
+    "$oid": "608abdac3ca0ed58d7312926"
+  },
+  "image": "https://www.retto.com/images/blog/2018/03/mcm1.jpg",
+  "sport": [
+    "ciclismo"
+  ],
+  "username": "Valentina",
+  "email": "valen@hotmail.com",
+  "password": "$2a$10$si.4NV937DRRdI65ayXo..8v/nC3Tm6HtAJ3xWPuAnBLnH.CxlP6e",
+  "description": "Me gusta ir en bici rollo tranqui por las afueras, alguien se quiere sumar? Paradas de picinic incluidas!",
+  "age": 38,
+  "genero": "mujer",
+  "city": "Barcelona",
+  "createdAt": {
+    "$date": "2021-04-29T14:07:40.726Z"
+  },
+  "updatedAt": {
+    "$date": "2021-04-29T14:07:40.726Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "608abdac3ca0ed58d7312924"
+  },
+  "image": "https://www.singlequiver.com/enelpico/wp-content/uploads/2020/08/surf-barceloneta.jpg",
+  "sport": [
+    "surf"
+  ],
+  "username": "Adrian",
+  "email": "ad@hotmail.com",
+  "password": "$2a$10$voxTXWTpP8p6wuvhB3QSCeoBH8Anr/aoayQsq9uR2VK3gfPNeBx/6",
+  "description": "No me pierdo una oportunidad de tomar una ola en la Barceloneta cada vez que se da la oportunidad, sin embargo me encantaría tener mas amistades para ir en busca de más olas!",
+  "age": 24,
+  "genero": "hombre",
+  "city": "Barcelona",
+  "createdAt": {
+    "$date": "2021-04-29T14:07:40.726Z"
+  },
+  "updatedAt": {
+    "$date": "2021-04-29T14:07:40.726Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "608abdac3ca0ed58d7312927"
+  },
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Padel_Tennis_Arena_ISPO_2014.jpg/800px-Padel_Tennis_Arena_ISPO_2014.jpg",
+  "sport": [
+    "paddel"
+  ],
+  "username": "Franco",
+  "email": "fran@hotmail.com",
+  "password": "$2a$10$Fkz77osIk5MZ0JfedI6mouO/hJUzQHmuuVAfS.AiIA5W.OIGPsbKO",
+  "description": "Quien se apunta a paddel tennis 2-3 veces a la semana en grupo? Nos hechamos unas cañas al terminar (chiste!)",
+  "age": 34,
+  "genero": "hombre",
+  "city": "Barcelona",
+  "createdAt": {
+    "$date": "2021-04-29T14:07:40.726Z"
+  },
+  "updatedAt": {
+    "$date": "2021-04-29T14:07:40.726Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "608abdac3ca0ed58d7312925"
+  },
+  "image": "https://www.bellezapura.com/wp-content/uploads/2020/05/mujer-corriendo.png",
+  "sport": [
+    "correr"
+  ],
+  "username": "Marie",
+  "email": "marie@hotmail.com",
+  "password": "$2a$10$eJ0j5AXRuDWngSXFOXrUiOBMS9UtrAnZKBuQ1PBeBtLnqLa8hDPCq",
+  "description": "Soy de Francia, llevo 5 años viviendo en Barcelona y me gustaría conocer más gente que le guste correr largas distancias. Quien se apunta a ese reto?!",
+  "age": 30,
+  "genero": "mujer",
+  "city": "Barcelona",
+  "createdAt": {
+    "$date": "2021-04-29T14:07:40.726Z"
+  },
+  "updatedAt": {
+    "$date": "2021-04-29T14:07:40.726Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "608abdac3ca0ed58d7312923"
+  },
+  "image": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/shirtless-man-climbing-on-rock-royalty-free-image-1591106833.jpg?crop=1.00xw:1.00xh;0,0&resize=980:*",
+  "sport": [
+    "escalada"
+  ],
+  "username": "Sam",
+  "email": "sam@hotmail.com",
+  "password": "$2a$10$2vPbl5b5johOTjoP0jguPeHbPQTSEz3EZxXJI1ya/Se95xrj5tp6K",
+  "description": "Me gusta escalar, normalmente entreno calistenia los días de semana y los findes de semana salgo a las afueras en busca de un rocodromo para practicar. Me gustaría quedar con más gente que lleve un estilo de vida similar.",
+  "age": 20,
+  "genero": "hombre",
+  "city": "Barcelona",
+  "createdAt": {
+    "$date": "2021-04-29T14:07:40.726Z"
+  },
+  "updatedAt": {
+    "$date": "2021-04-29T14:07:40.726Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "608abdac3ca0ed58d7312928"
+  },
+  "image": "https://pxb.cdn.elchubut.com.ar/chubut/032021/1614730568196.jpg",
+  "sport": [
+    "futbol"
+  ],
+  "username": "Cristina",
+  "email": "cris@hotmail.com",
+  "password": "$2a$10$1tTULRaBurnjEw54qPNOBu9OIx7WekIGWCqsrQe.eFs3THXRuSpWO",
+  "description": "He llegado de Brasil hace unos meses y como viene verano, quiero encontrar compañer@s para ir a jugar futbol en la playa",
+  "age": 27,
+  "genero": "mujer",
+  "city": "Barcelona",
+  "createdAt": {
+    "$date": "2021-04-29T14:07:40.726Z"
+  },
+  "updatedAt": {
+    "$date": "2021-04-29T14:07:40.726Z"
+  },
+  "__v": 0
+}]

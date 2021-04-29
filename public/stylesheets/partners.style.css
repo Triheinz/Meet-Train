@@ -32,12 +32,13 @@
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
-    padding-left:8px;
-    padding-right:8px;
+    box-shadow: 2px 2px 10px blue;
 }
 
 p {
     margin: 0px;
+    padding-left: 2px;
+    padding-right: 2px;
 }
 
 .btn btn-success {

@@ -106,7 +106,7 @@ mongoose
         const groups = [{
                 admin: [ids[0]],
                 image: 'https://www.manasluadventures.com/wp-content/uploads/2019/09/Escalada-en-V%C3%ADas-Largas-1024x654.jpg',
-                name: 'escalar en barcelona',
+                name: 'Escalar en barcelona',
                 email: 'sam@hotmail.com',
                 description: 'Este sábado quedamos en el rocodromo de Sant just a las 10am!! No olviden su snack, contáctame para mas detalles! ',
                 announcement: 'Este sábado quedamos en el rocodromo de Sant just a las 10am!! No olviden su snack, contáctame para mas detalles! ',
@@ -152,10 +152,6 @@ mongoose
     })
     .then((createdGroups) => {
         console.log(`Created ${createdGroups.length} groups`);
-    }) <<
-    << << < HEAD
-    .catch((error) => console.error(error)); ===
-=== =
+    })
 
-.catch((error) => console.error(error)); >>>
->>> > f31175c915fcae6b4c20f75828f77d92289ba274
+.catch((error) => console.error(error));

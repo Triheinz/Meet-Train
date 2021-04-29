@@ -108,6 +108,12 @@ li {
     margin-top: 100px;
 }
 
+.link {
+    position: absolute;
+    top: 70%;
+    left: 39.3%;
+}
+
 .formall {
     width: 400px;
     height: 800px;

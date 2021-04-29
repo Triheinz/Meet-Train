@@ -1,11 +1,13 @@
-.allpartners {
-    display:flex;
-    justify-content: center;
+.contenido {
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+    height: 500px;
     margin-top: 80px;
 }
 
-.btn btn-success{
-  border-radius: 50px;
+.btn btn-success {
+    border-radius: 50px;
     width: 250px;
     height: 60px;
     color: white;

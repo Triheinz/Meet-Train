@@ -5,23 +5,30 @@
 <img src={{user.image}} class="img-thumbnail" alt="profile-pic">
 
   <div class ="procontent">
-  <p> <span class='procamps'>Edad:</span> {{user.age}}</p>
+    <div class="div-p">
+  <p class="p"> <span class='procamps'>Edad:</span> {{user.age}}</p>
   <br>
-  <p> <span class='procamps'>Género:</span> {{user.genero}}</p>
+  <p class="p"> <span class='procamps'>Género:</span> {{user.genero}}</p>
   <br>
-  <p><span class='procamps'>Ciudad:</span> {{user.city}}</p>
-  <br>
+  <p class="p"><span class='procamps'>Ciudad:</span> {{user.city}}</p>
+  <br> 
+  </div>
   <p><span class='procamps'>Descripción:</span> {{user.description}}</p>
   <br>
-  <p><span class='procamps'>Deporte:</span>
+  <p><span class='procamps'>Deportes:</span>
+  <div class="deportes">
   {{#each user.sport}}
-  {{this}}
-  {{/each}}</p>
   <br>
-  <a class='link' href="/private/edit">Editar perfil</a>
+  <li>{{this}}</li>
+  {{/each}}</p>
+  </div>
+  <br>
+  <div class="div-botones">
+  <a class='link' href="/private/edit"> Editar perfil </a>
   <form action="/private/{{user._id}}/delete" method="POST">
-        <button type="submit">Elimina tu perfil</button>
+        <button class="boton-eliminar "type="submit">Elimina tu perfil</button>
         </form>
+</div>
 </div>
 
 </div>

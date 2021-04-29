@@ -6,7 +6,7 @@ module.exports = (app) => {
     console.log(process.env.MONGODB_URL);
     app.use(
       session({
-        secret: process.env.SECRET,
+        secret: process.env.SESSION_SECRET,
         resave: true,
         saveUninitialized: false,
         cookie: {

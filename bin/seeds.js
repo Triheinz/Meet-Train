@@ -20,7 +20,7 @@ mongoose
         const users = [
           {
             image:
-              'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.menshealth.com%2Fes%2Ffitness%2Fa32742317%2Fescalada-ejercicios-gimnasio%2F&psig=AOvVaw23B_HEPhm56xj0cQ2ix4fJ&ust=1619788118294000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCLCQiI7Do_ACFQAAAAAdAAAAABAJ',
+              'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/shirtless-man-climbing-on-rock-royalty-free-image-1591106833.jpg?crop=1.00xw:1.00xh;0,0&resize=980:*',
             username: 'Sam',
             email: 'sam@hotmail.com',
             password: '12345',
@@ -34,7 +34,7 @@ mongoose
           },
           {
             image:
-              'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.singlequiver.com%2Fenelpico%2Fsurf-barcelona%2F&psig=AOvVaw0d_GvUCkY_PUfyCo3-M-7s&ust=1619788268079000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCIjI9NnDo_ACFQAAAAAdAAAAABAD',
+              'https://www.singlequiver.com/enelpico/wp-content/uploads/2020/08/surf-barceloneta.jpg',
             username: 'Adrian',
             email: 'ad@hotmail.com',
             password: '12345',
@@ -48,7 +48,7 @@ mongoose
           },
           {
             image:
-              '/https://www.google.com/url?sa=i&url=https%3A%2F%2Fsp.depositphotos.com%2Fstock-photos%2Fmujer-corriendo.html&psig=AOvVaw1SwtqO0f5w3vc5bhEDCs4K&ust=1619788580449000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJj4tu7Eo_ACFQAAAAAdAAAAABAD',
+              'https://www.bellezapura.com/wp-content/uploads/2020/05/mujer-corriendo.png',
             username: 'Marie',
             email: 'marie@hotmail.com',
             password: '12345',
@@ -61,8 +61,7 @@ mongoose
             groups: 'Run Bcn Run',
           },
           {
-            image:
-              'https://www.google.com/url?sa=i&url=https%3A%2F%2Fblog.retto.com%2Fmejores-cascos-mujer-ciclismo%2F&psig=AOvVaw0uoiehk3wRcMFHpT0fqlo2&ust=1619788524452000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCPiPxtXEo_ACFQAAAAAdAAAAABAD',
+            image: 'https://www.retto.com/images/blog/2018/03/mcm1.jpg',
             username: 'Valentina',
             email: 'valen@hotmail.com',
             password: '12345',
@@ -76,7 +75,7 @@ mongoose
           },
           {
             image:
-              'https://www.google.com/url?sa=i&url=https%3A%2F%2Fes.m.wikipedia.org%2Fwiki%2FArchivo%3APadel_Tennis_Arena_ISPO_2014.jpg&psig=AOvVaw2MO-rFIzqLKxOBhX4BGlK9&ust=1619788969409000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMDr66jGo_ACFQAAAAAdAAAAABAD',
+              'https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Padel_Tennis_Arena_ISPO_2014.jpg/800px-Padel_Tennis_Arena_ISPO_2014.jpg',
             username: 'Franco',
             email: 'fran@hotmail.com',
             password: '12345',
@@ -90,7 +89,7 @@ mongoose
           },
           {
             image:
-              'https://www.google.com/url?sa=i&url=https%3A%2F%2Fsp.depositphotos.com%2F197907346%2Fstock-photo-young-woman-playing-soccer-ball.html&psig=AOvVaw0vz_sVCgo-43R9i8CRzWUx&ust=1619789039687000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCODRic_Go_ACFQAAAAAdAAAAABAD',
+              'https://pxb.cdn.elchubut.com.ar/chubut/032021/1614730568196.jpg',
             username: 'Cristina',
             email: 'cris@hotmail.com',
             password: '12345',
@@ -123,7 +122,7 @@ mongoose
           {
             admin: [ids[0]],
             image:
-              'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.manasluadventures.com%2F10-beneficios-de-escalar-montanas%2F&psig=AOvVaw0a6ASNGg0KgEVp1JFNM32Y&ust=1619790476974000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKCqifXLo_ACFQAAAAAdAAAAABAD',
+              'https://www.manasluadventures.com/wp-content/uploads/2019/09/Escalada-en-V%C3%ADas-Largas-1024x654.jpg',
             name: 'escalar en barcelona',
             email: 'sam@hotmail.com',
             description:
@@ -137,7 +136,7 @@ mongoose
           {
             admin: [ids[1]],
             image:
-              'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.surfcantabria.com%2Fnoticias-enlace%2Fitem%2F3567-cronica-del-campeonato-regional-de-surf-2019.html&psig=AOvVaw2Z3vKyvUtrCjnof1gTLpZD&ust=1619790394748000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCIjc8M7Lo_ACFQAAAAAdAAAAABAD',
+              'https://www.surfcantabria.com/images/2019/GRUPO_REGIONAL2019.jpg',
             name: 'Surf en la city',
             email: 'ad@hotmail.com',
             description:
@@ -151,7 +150,7 @@ mongoose
           {
             admin: [ids[2]],
             image:
-              'https://www.google.com/url?sa=i&url=http%3A%2F%2Fwww.ashisports.es%2Fblog%2Fclub-de-corredores-en-barcelona%2F&psig=AOvVaw0vEL8NDhsM6_6Lv6FD9i97&ust=1619790308261000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNCQtaLLo_ACFQAAAAAdAAAAABAD',
+              'http://www.ashisports.es/blog/wp-content/uploads/2017/04/newproject_2_original-88.jpg',
             name: 'Run Bcn Run',
             email: 'marie@hotmail.com',
             description:
@@ -165,7 +164,7 @@ mongoose
           {
             admin: [ids[3]],
             image:
-              'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.senalcolombia.tv%2Fdeportes%2Fcolectivos-mujeres-para-montar-bici&psig=AOvVaw0M6OefWlyjt6zO8xHwlsG4&ust=1619790261310000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMj3g5XLo_ACFQAAAAAdAAAAABAD',
+              'https://s3.amazonaws.com/rtvc-assets-senalcolombia.gov.co/s3fs-public/field/image/ciclismo%20femenino%20ARTICULO.jpg',
             name: 'Bike Chill barcelona',
             email: 'valen@hotmail.com',
             description:

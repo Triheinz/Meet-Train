@@ -1,11 +1,10 @@
-<div class="partners">
-    <h2>USUARIOS</h2>
 
-    <div class='allpartners'>
-        {{#each users}}
+    <h2 class="texto-h2">USUARIOS</h2>
         <div class="mega-contenido">
+        {{#each users}}
+        
             <div class="contenido">
-                <img src={{image}} class="img-thumbnail" alt="profile-pic">
+                <img class="imagen" src={{image}} class="img-thumbnail" alt="profile-pic">
                 <br>
                 <p> <span class='procamps'>Nombre:</span> {{username}}</p>
                 <br>
@@ -17,8 +16,8 @@
                 <br>
                 <p><span class='procamps'>Descripción:</span> {{description}}</p>
                 <br>
-                <p><span class='procamps'>Deporte:{{sport}}</span>
-
+                <p><span class='procamps'>Deporte: {{sport}}</span>
+                <br>
                     <button type="button" class="btn btn-success" data-bs-toggle="modal"
                         data-bs-target="#contact{{@index}}">
                         Contactar
@@ -43,8 +42,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+        
+    
     {{/each}}
-</div>
-</div>
+    </div>
+    </div>

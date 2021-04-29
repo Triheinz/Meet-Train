@@ -2,12 +2,17 @@ require('dotenv').config();
 const User = require('../models/User.model');
 const Groups = require('../models/Groups.model');
 const mongoose = require('mongoose'); //Paquete para conectarme a la base de datos
-const DB_NAME = 'meet-train-app'; //nombre de la base de datos que se va a crear.
+const DB_NAME = 'meet-train'; //nombre de la base de datos que se va a crear.
 const bcrypt = require('bcryptjs');
 const saltRounds = 10;
 let userIds = [];
 mongoose
-    .connect(`mongodb://localhost/${DB_NAME}`) //Nos conectamos a la base de datos y nos devuelve una promesa.
+    .connect(process.env.MONGODB_URL,{
+      useCreateIndex: true,
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+        useFindAndModify: false,
+    }) //Nos conectamos a la base de datos y nos devuelve una promesa.
     .then((db) => {
         // Aquí estamos 100% seguros que estamos conectados a la base de datos.
         console.log('Connected to database');

@@ -1,5 +1,5 @@
     /* -------grupos-------- */
-
+    
     .titulo-grupos {
         text-align: center;
         margin-top: 100px;
@@ -8,15 +8,15 @@
         font-size: 75px;
         font-family: 'Acme';
     }
-
+    
     .div-grupos {
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         justify-content: space-around;
         border: 2px solid rgba(68, 0, 255, 0.418);
         margin-top: 190px;
     }
-
+    
     .contenedor-grupo {
         width: 440px;
         height: 700px;
@@ -27,7 +27,7 @@
         border: 5px solid rgb(106, 54, 148);
         margin: 15px;
     }
-
+    
     .img {
         height: 300px;
         width: 300px;
@@ -36,19 +36,19 @@
         margin-top: 10px;
         box-shadow: 2px 2px 10px blue;
     }
-
+    
     .texto {
         width: 400px;
         text-align: center;
     }
-
+    
     .editar-2 {
         font-size: 20px;
         margin-bottom: 10px;
         color: rrgb(23, 123, 117);
         text-decoration: none;
     }
-
+    
     .boton-crear {
         position: absolute;
         position: fixed;
@@ -62,7 +62,7 @@
         color: #ffffff;
         text-decoration: none;
     }
-
+    
     .boton {
         position: absolute;
         display: flex;
@@ -80,7 +80,7 @@
         margin-top: 5%;
         margin-bottom: 5%;
     }
-
+    
     .boton-eliminar {
         border-radius: 50px;
         width: 100px;
@@ -92,22 +92,22 @@
         margin-left: 30px;
         margin-top: 30px;
     }
-
+    
     .boton-eliminar:hover {
         background-color: rgb(20, 92, 87);
     }
     /* ------editar grupos-------- */
-
+    
     .edit-grupos {
         margin-top: 80px;
     }
-
+    
     .div-grupos2 {
         display: flex;
         justify-content: center;
         width: 100vw;
     }
-
+    
     .contenedor-grupo2 {
         width: 440px;
         height: 550px;
@@ -118,27 +118,27 @@
         align-items: center;
         border: 1px solid #0066ff;
     }
-
+    
     .imagen-crear {
         margin-top: 5px;
         margin-bottom: 10px;
         box-shadow: 0px 0px 5px #0066ff;
     }
-
+    
     .texto2 {
         width: 400px;
         text-align: center;
     }
-
+    
     .email-label {
         margin-right: 20px;
     }
-
+    
     .div-input {
         display: flex;
         flex-direction: row;
     }
-
+    
     input {
         outline: none;
         border: 0.5px solid grey;
@@ -146,7 +146,7 @@
         border-radius: 5px;
         padding-left: 10px;
     }
-
+    
     .boton-crear-grupo {
         border-radius: 50px;
         width: 100px;

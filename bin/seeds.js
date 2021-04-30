@@ -19,7 +19,8 @@ mongoose
         return db.connection.dropDatabase();
     })
     .then(() => {
-        const users = [{
+        const users = [
+          {
                 image: 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/shirtless-man-climbing-on-rock-royalty-free-image-1591106833.jpg?crop=1.00xw:1.00xh;0,0&resize=980:*',
                 username: 'Sam',
                 email: 'sam@hotmail.com',
@@ -107,9 +108,9 @@ mongoose
         console.log(userIds);
         return userIds;
     })
-    .then((ids) => { <<
-            << << < HEAD
-            const groups = [{
+    .then((ids) => {
+            const groups = [
+              {
                     admin: [ids[0]],
                     image: 'https://www.manasluadventures.com/wp-content/uploads/2019/09/Escalada-en-V%C3%ADas-Largas-1024x654.jpg',
                     name: 'Escalar en barcelona',
@@ -152,63 +153,18 @@ mongoose
                     city: 'Barcelona',
                     sport: 'ciclismo',
                     members: [ids[3]],
-                }, ===
-                === =
-                const groups = [{
-                        admin: [ids[0]],
-                        image: 'https://www.manasluadventures.com/wp-content/uploads/2019/09/Escalada-en-V%C3%ADas-Largas-1024x654.jpg',
-                        name: 'escalar en barcelona',
-                        email: 'sam@hotmail.com',
-                        description: 'Este sábado quedamos en el rocodromo de Sant just a las 10am!! No olviden su snack, contáctame para mas detalles! ',
-                        announcement: 'Este sábado quedamos en el rocodromo de Sant just a las 10am!! No olviden su snack, contáctame para mas detalles! ',
-                        city: 'Barcelona',
-                        sport: 'escalada',
-                        members: [ids[0]],
-                    },
-                    {
-                        admin: [ids[1]],
-                        image: 'https://www.surfcantabria.com/images/2019/GRUPO_REGIONAL2019.jpg',
-                        name: 'Surf en la city',
-                        email: 'ad@hotmail.com',
-                        description: 'Seamos los suficientes para irnos de ruta buscando las mejores olas, escríbeme para añadirte al grupo!',
-                        announcement: 'Seamos los suficientes para irnos de ruta buscando las mejores olas, escríbeme para añadirte al grupo!',
-                        city: 'Barcelona',
-                        sport: 'surf',
-                        members: [ids[1]],
-                    },
-                    {
-                        admin: [ids[2]],
-                        image: 'http://www.ashisports.es/blog/wp-content/uploads/2017/04/newproject_2_original-88.jpg',
-                        name: 'Run Bcn Run',
-                        email: 'marie@hotmail.com',
-                        description: 'Domingo arrancamos preparacion para los 10km, si eres principiante no te preocupes juntos llegaremos mas lejos! Ecríbeme:)',
-                        announcement: 'Domingo arrancamos preparacion para los 10km, si eres principiante no te preocupes juntos llegaremos mas lejos! Ecríbeme:) ',
-                        city: 'Barcelona',
-                        sport: 'correr',
-                        members: [ids[2]],
-                    },
-                    {
-                        admin: [ids[3]],
-                        image: 'https://s3.amazonaws.com/rtvc-assets-senalcolombia.gov.co/s3fs-public/field/image/ciclismo%20femenino%20ARTICULO.jpg',
-                        name: 'Bike Chill barcelona',
-                        email: 'valen@hotmail.com',
-                        description: 'El 5 de Junio haremos una ruta chill + paradas de picnic, hemos empezado los entrenamientos escríbenos para incluirte!',
-                        announcement: 'El 5 de Junio haremos una ruta chill + paradas de picnic, hemos empezado los entrenamientos escríbenos para incluirte!',
-                        city: 'Barcelona',
-                        sport: 'ciclismo',
-                        members: [ids[3]],
-                    }, >>>
-                    >>> > 9787 f4c32251932cd5c3fe52856dfb5a452017d5
+                },
+
                 ];
                 return Groups.create(groups);
-            })
+
+    })
+
         .then((createdGroups) => {
             console.log(`Created ${createdGroups.length} groups`);
         })
 
-        <<
-        << << < HEAD
-        .catch((error) => console.error(error)); ===
-        === =
-        .catch((error) => console.error(error)); >>>
-        >>> > 9787 f4c32251932cd5c3fe52856dfb5a452017d5
+
+        .catch((error) => console.error(error))
+
+        

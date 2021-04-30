@@ -5,7 +5,7 @@ const express = require('express');
 
 const mongoose = require('mongoose') //Paquete para conectarme a la base de datos
 const app = express() // Creamos la instancia de express
-const DB_NAME = 'meet-train-app' // Nombre de la base de datos
+const DB_NAME = 'meet-train' // Nombre de la base de datos
 
 //Database
 require('./config/db.config');
@@ -36,4 +36,6 @@ app.use('/private', privateRouter);
 
 
 //Ponemos a la aplicación a escuchar en el puerto 3000
-app.listen(3000, () => console.log(`Listening on port 3000. http://localhost:3000`))
+app.listen(process.env.PORT, () =>
+  console.log(`Listening on port ${process.env.PORT}.`)
+);

@@ -152,10 +152,15 @@ mongoose
                 sport: 'ciclismo',
                 members: [ids[3]],
             },
+
         ];
         return Groups.create(groups);
+
     })
-    .then((createdGroups) => {
-        console.log(`Created ${createdGroups.length} groups`);
-    })
-    .catch((error) => console.error(error))
+
+.then((createdGroups) => {
+    console.log(`Created ${createdGroups.length} groups`);
+})
+
+
+.catch((error) => console.error(error))

@@ -1,7 +1,7 @@
 # Meet & Train
 
 ## Description
-Search and collaborative Data base platform for sports entusiast in which you can create your profile according to your sport qualities, level, and area. Also, you can also use the plaform to find people with similar interests make groups or just arrange sports activities.
+Search and collaborative Data base platform for sports entusiast in which you can create your profile according to your sport qualities, level, and area. Also, you can also use the plaform to find people with similar interests make events or just arrange sports activities.
 
 ## User Stories
 - 404 - As users, we want to be politely warned that this page does not exist and it was our fault to search for it.
@@ -13,11 +13,10 @@ Search and collaborative Data base platform for sports entusiast in which you ca
 - Log In - As users, we want to log in so we can see the amazing aditional features and create our profile!
 - Log Out - As users, we want to close our session once we finished navigating through this amazing page so no one can get back to our account.
 - Edit Profile - As users, we want to be able to edit our profiles whenever we need it.
-- Create Sport group - As users, we want to be able to interact with group of people with similar sports interest and collaborate between us.
-- Edit Sports group - As users, we want to edit the sport group if some information is not correct or there's a recent update.
-- Delete Sport group - As users, we want to delete some of the sports groups we've created anytime we need to.
-- Messages -  as users we want to stablish connection though a message to contact the other profiles user we like.
-- Good Buddy -  as users we want to help the platform and other users know how our encounters went though a comment review on the profile of each user.
+- Create Sport event - As users, we want to be able to interact with event of people with similar sports interest and collaborate between us.
+- Edit Sports event - As users, we want to edit the sport event if some information is not correct or there's a recent update.
+- Delete Sport event - As users, we want to delete some of the sports events we've created anytime we need to.
+
 
 
 
@@ -34,7 +33,7 @@ Search and collaborative Data base platform for sports entusiast in which you ca
 | GET                      | /private/profile/:userId | Private route. Renders `private/profile` view.               |
 | POST                     | /private/edit-user       | Private route. Sends edit-profile info to server and updates user in DB and in `profile` view. \| {[imageUrl], name, email, password} |
 | POST                     | /private/delete-user     | Executes delete button function and updated DB. Redirects to `/private/profile/${userId}` view. |
-| POST                     | /private/delete-groups   | Executes delete button function and updated DB. Redirects to `/private/profile/${userId}` view.`` |
+| POST                     | /private/delete-events   | Executes delete button function and updated DB. Redirects to `/private/profile/${userId}` view.`` |
 
 
 
@@ -42,43 +41,49 @@ Search and collaborative Data base platform for sports entusiast in which you ca
 User model
 ```javascript
 {
-
-    "image": { type: String, default: '../images/avatar.png' },
-    "name": String,
-    "email": String,
-    "password": String,
-    "description":String,
-    "age": Number,
-    "city": String,
-    "sport": [String],
-    "level": String,
-    "GroupsCreate": [{ type: Schema.Types.ObjectId, ref: 'Group' }],
-    "mensaje": [{ type: Schema.Types.ObjectId, ref: 'User' }]
-
+    image: {
+      type: String,
+      default:
+        'https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png',
+    },
+    username: { type: String, required: true },
+    email: { type: String, required: true, unique: true },
+    password: { type: String, required: true },
+    description: { type: String, maxlength: 1000 },
+    age: { type: Number },
+    genero: { type: String, require: true },
+    city: { type: String },
+    sport: [{ type: String, require: true }],
 
   }
 ```
-Group model
+Event model
 ```javascript
 {
-   "image": { type: String, default: '../images/avatar.png' },
-    "name": String,
-    "participants": [{ type: Schema.Types.ObjectId, ref: 'User' }]
-    "password": String,
-    "description":String,
-    "city": String,
-    "level": String,
-    "GroupsCreate": [{ type: Schema.Types.ObjectId, ref: 'Group' }],
-    "mensaje": [{ type: Schema.Types.ObjectId, ref: 'User' }]
+    admin: { type: Schema.Types.ObjectId, ref: "User" },
+    image: { type: String },
+    email: { type: String },
+    name: { type: String, required: true },
+    description: {
+        type: String,
+        maxlength: 1000,
+    },
+    announcement: {
+        type: String,
+        maxlength: 1000,
+    },
+    city: { type: String },
+    sport: [{ type: String }],
+    members: [{ type: Schema.Types.ObjectId, ref: 'User' }],
+    activitiesPics: [{ type: String }],
 }
 ```
 
 ## Backlog
 
 - Responsive
-- Mapbox to display routes done by users
-- Implement live chat feature
-- Nodemailer to welcome user to the website and when joining sport group
+- Implement messages section
+- Nodemailer to welcome user to the website and when creatin an event
 - Create a public API with the db we made.
 
 
@@ -100,4 +105,4 @@ Group model
 
 #### Slides
 
-[Our amazing presentation!](https://www.figma.com/file/5UEUHe5E2Z2J8768LjAlRJ/Meet-and-Train?node-id=2%3A5)
+[Our amazing presentation!](https://prezi.com/view/BuAI1GjZsJ9yXlzygl1R/)
